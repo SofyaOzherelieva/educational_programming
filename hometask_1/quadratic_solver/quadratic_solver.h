@@ -5,6 +5,8 @@
 #include <complex>
 #include <vector>
 
+#define EPSILON 0.001
+
 using std::vector;
 
 /*!
@@ -32,7 +34,7 @@ class QuadraticSolver {
     /*!
      * Комплексные корни уравнения.
      */
-    vector<std::complex<double>> answer_;
+    vector <std::complex<double>> answer_;
 
     /*! \brief Решает квадратное уравнение.
         \throws assert - если и коэффициент при x^2 и при x равны нулю

@@ -2,7 +2,7 @@
 #import "quadratic_solver.h"
 
 
-void TestQuadraticSolver::better_assert(vector<double>& coefficients) {
+void TestQuadraticSolver::better_assert(vector<double> &coefficients) {
 
   test_num_++;
 
@@ -18,10 +18,10 @@ void TestQuadraticSolver::better_assert(vector<double>& coefficients) {
 }
 
 
-void TestQuadraticSolver::test_quadratic_solver(){
+void TestQuadraticSolver::test_quadratic_solver() {
   vector<double> coefficients;
 
-  for(auto& coefficients: test_data_){
+  for (auto &coefficients: test_data_) {
     better_assert(coefficients);
     std::cerr << "The test №" << test_num_ << " OK" << '\n';
   }

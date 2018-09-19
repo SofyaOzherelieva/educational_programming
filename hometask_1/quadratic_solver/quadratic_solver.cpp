@@ -1,13 +1,14 @@
 #import "quadratic_solver.h"
 
 std::complex<double> QuadraticSolver::linear_solver() {
-  assert(coefficients_[0] == 0 and coefficients_[1] != 0 and "The first two coefficients must be nonzero");
+  assert(std::abs(coefficients_[0]) < EPSILON and std::abs(coefficients_[1]) > EPSILON and
+         "The first two coefficients must be nonzero");
   return -coefficients_[2] / coefficients_[1];
 }
 
 void QuadraticSolver::quadratic_solver() {
   /*c - coefficients of the quadratic equation*/
-  if (coefficients_[0] == 0) {
+  if (std::abs(coefficients_[0]) < EPSILON) {
     answer_.push_back(linear_solver());
 
   } else {
