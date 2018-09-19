@@ -8,6 +8,8 @@ std::complex<double> QuadraticSolver::linear_solver() {
 
 void QuadraticSolver::quadratic_solver() {
   /*c - coefficients of the quadratic equation*/
+  
+  /* Okay, do not compare double-like numbers with 0, it's inaccurate, plz think of eps */
   if (std::abs(coefficients_[0]) < EPSILON) {
     answer_.push_back(linear_solver());
 
