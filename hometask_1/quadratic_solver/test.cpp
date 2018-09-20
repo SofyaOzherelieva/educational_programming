@@ -10,18 +10,15 @@ void TestQuadraticSolver::better_assert(vector<double> &coefficients) {
 
   quadraticSolver.quadratic_solver();
 
-  for (int i = 0; i < quadraticSolver.answer_.size(); i++) {
+  for (auto answer: quadraticSolver.answer_) {
     assert("The test failed" and
-      std::norm(quadraticSolver.answer_[i] * quadraticSolver.answer_[i] * coefficients[0] +
-                quadraticSolver.answer_[i] * coefficients[1] + coefficients[2]) < EPSILON);
+           std::norm(answer * answer * coefficients[0] + answer * coefficients[1] + coefficients[2]) < EPSILON);
   }
 }
 
 
 void TestQuadraticSolver::test_quadratic_solver() {
-  vector<double> coefficients;
-
-  for (auto &coefficients: test_data_) {
+  for (auto coefficients: test_data_) {
     better_assert(coefficients);
     std::cerr << "The test №" << test_num_ << " OK" << '\n';
   }

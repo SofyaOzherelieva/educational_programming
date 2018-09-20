@@ -34,7 +34,7 @@ class QuadraticSolver {
     /*!
      * Комплексные корни уравнения.
      */
-    vector <std::complex<double>> answer_;
+    vector<std::complex<double>> answer_;
 
     /*! \brief Решает квадратное уравнение.
         \throws assert - если и коэффициент при x^2 и при x равны нулю
@@ -44,7 +44,7 @@ class QuadraticSolver {
     void quadratic_solver();
 
   private:
-    vector<double> coefficients_;
+    const vector<double>& coefficients_;
 
     std::complex<double> linear_solver();
 };
