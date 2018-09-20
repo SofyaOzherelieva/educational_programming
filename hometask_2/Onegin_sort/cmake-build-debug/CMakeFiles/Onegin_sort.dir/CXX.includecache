@@ -1,0 +1,32 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/sofya/Homework/Ded_hometasks/educational_programming/hometask_2/Onegin_sort/Book.cpp
+Book.h
+/home/sofya/Homework/Ded_hometasks/educational_programming/hometask_2/Onegin_sort/Book.h
+
+/home/sofya/Homework/Ded_hometasks/educational_programming/hometask_2/Onegin_sort/Book.h
+algorithm
+-
+assert.h
+-
+iostream
+-
+functional
+-
+
+/home/sofya/Homework/Ded_hometasks/educational_programming/hometask_2/Onegin_sort/main.cpp
+Book.h
+/home/sofya/Homework/Ded_hometasks/educational_programming/hometask_2/Onegin_sort/Book.h
+
+/home/sofya/Homework/Ded_hometasks/educational_programming/hometask_2/Onegin_sort/test.cpp
+test.h
+/home/sofya/Homework/Ded_hometasks/educational_programming/hometask_2/Onegin_sort/test.h
+
+/home/sofya/Homework/Ded_hometasks/educational_programming/hometask_2/Onegin_sort/test.h
+
