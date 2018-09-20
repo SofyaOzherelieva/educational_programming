@@ -12,60 +12,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b248911e-5c85-4030-bf81-17ec44f72164" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/Onegin_sort.iml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Book.cpp" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/Book.h" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/CMakeLists.txt" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/DANTE_PARADISE.txt" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.9.6/CMakeCCompiler.cmake" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.9.6/CMakeCXXCompiler.cmake" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.9.6/CMakeDetermineCompilerABI_C.bin" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.9.6/CMakeDetermineCompilerABI_CXX.bin" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.9.6/CMakeSystem.cmake" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.9.6/CompilerIdC/CMakeCCompilerId.c" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.9.6/CompilerIdC/a.out" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.9.6/CompilerIdCXX/CMakeCXXCompilerId.cpp" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.9.6/CompilerIdCXX/a.out" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeOutput.log" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Onegin_sort.dir/Book.cpp.o" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Onegin_sort.dir/CXX.includecache" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Onegin_sort.dir/DependInfo.cmake" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Onegin_sort.dir/build.make" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Onegin_sort.dir/cmake_clean.cmake" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Onegin_sort.dir/depend.internal" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Onegin_sort.dir/depend.make" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Onegin_sort.dir/flags.make" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Onegin_sort.dir/link.txt" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Onegin_sort.dir/main.cpp.o" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Onegin_sort.dir/progress.make" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Onegin_sort.dir/test.cpp.o" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-environment.txt" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/cmake.check_cache" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/feature_tests.bin" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/feature_tests.c" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/feature_tests.cxx" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/cmake-build-debug/Onegin_sort" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/cmake-build-debug/Onegin_sort.cbp" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/cmake-build-debug/answer.txt" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/cmake-build-debug/cmake_install.cmake" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/cmake-build-debug/rev_sort.txt" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/cmake-build-debug/sort.txt" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/main.cpp" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/test.cpp" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/test.h" />
+      <change beforePath="$PROJECT_DIR$/Book.h" afterPath="$PROJECT_DIR$/Book.h" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -78,31 +25,11 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="test.cpp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test.cpp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="72">
-              <caret line="4" column="17" lean-forward="false" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="test.h" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/test.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="114">
-              <caret line="25" column="6" lean-forward="true" selection-start-line="25" selection-start-column="6" selection-end-line="25" selection-end-column="6" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Book.cpp" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Book.cpp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Book.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="108">
-              <caret line="6" column="70" lean-forward="false" selection-start-line="6" selection-start-column="70" selection-end-line="6" selection-end-column="70" />
+            <state relative-caret-position="-274">
+              <caret line="16" column="3" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="3" />
               <folding />
             </state>
           </provider>
@@ -111,8 +38,8 @@
       <file leaf-file-name="Book.h" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Book.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
-              <caret line="41" column="35" lean-forward="false" selection-start-line="41" selection-start-column="35" selection-end-line="41" selection-end-column="35" />
+            <state relative-caret-position="-930">
+              <caret line="48" column="5" lean-forward="false" selection-start-line="48" selection-start-column="2" selection-end-line="48" selection-end-column="5" />
               <folding>
                 <element signature="e#55#75#0" expanded="true" />
               </folding>
@@ -159,6 +86,8 @@
       <find>CANTO</find>
       <find>skip_punctuation_marks</find>
       <find>bind</find>
+      <find>len</find>
+      <find>length_of_line</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -170,8 +99,8 @@
         <option value="$PROJECT_DIR$/test.cpp" />
         <option value="$PROJECT_DIR$/test.h" />
         <option value="$PROJECT_DIR$/main.cpp" />
-        <option value="$PROJECT_DIR$/Book.h" />
         <option value="$PROJECT_DIR$/Book.cpp" />
+        <option value="$PROJECT_DIR$/Book.h" />
       </list>
     </option>
   </component>
@@ -271,12 +200,12 @@
       <workItem from="1537014233055" duration="4031000" />
       <workItem from="1537110664435" duration="46717000" />
       <workItem from="1537442483187" duration="2918000" />
-      <workItem from="1537445896811" duration="308000" />
+      <workItem from="1537445896811" duration="1117000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="53974000" />
+    <option name="totallyTimeSpent" value="54783000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="-4" width="1366" height="772" extended-state="6" />
@@ -341,8 +270,13 @@
           <line>70</line>
           <option name="timeStamp" value="17" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/Book.cpp</url>
+          <line>145</line>
+          <option name="timeStamp" value="22" />
+        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="22" />
+      <option name="time" value="23" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -568,22 +502,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
-          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Book.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="6" column="70" lean-forward="false" selection-start-line="6" selection-start-column="70" selection-end-line="6" selection-end-column="70" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/cmake-build-debug/sort.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="384">
@@ -600,20 +518,36 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/test.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="25" column="6" lean-forward="true" selection-start-line="25" selection-start-column="6" selection-end-line="25" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18">
+          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Book.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="41" column="35" lean-forward="false" selection-start-line="41" selection-start-column="35" selection-end-line="41" selection-end-column="35" />
+        <state relative-caret-position="-930">
+          <caret line="48" column="5" lean-forward="false" selection-start-line="48" selection-start-column="2" selection-end-line="48" selection-end-column="5" />
           <folding>
             <element signature="e#55#75#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test.h">
+    <entry file="file://$PROJECT_DIR$/Book.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="25" column="6" lean-forward="true" selection-start-line="25" selection-start-column="6" selection-end-line="25" selection-end-column="6" />
+        <state relative-caret-position="-274">
+          <caret line="16" column="3" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="3" />
           <folding />
         </state>
       </provider>

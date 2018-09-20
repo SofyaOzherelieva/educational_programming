@@ -98,8 +98,14 @@ class Book {
     Line *array_of_lines_;
     long long num_of_lines_ = 0;
 
+    /*!
+     * Меняет '\n' на '\0' в буфере. Для упрощенного вывода конкретной строки.
+     */
     void change_n_to_o();
 
+    /*!
+     * Заполняет array_of_lines_.
+     */
     void book_indexing();
 
     bool comparator(const Line &line1, const Line &line2);
