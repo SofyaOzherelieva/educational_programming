@@ -1,0 +1,42 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/sofya/Homework/Ded_hometasks/educational_programming/hometask_1/quadratic_solver/main.cpp
+quadratic_solver.h
+/home/sofya/Homework/Ded_hometasks/educational_programming/hometask_1/quadratic_solver/quadratic_solver.h
+test.h
+/home/sofya/Homework/Ded_hometasks/educational_programming/hometask_1/quadratic_solver/test.h
+
+/home/sofya/Homework/Ded_hometasks/educational_programming/hometask_1/quadratic_solver/quadratic_solver.cpp
+quadratic_solver.h
+/home/sofya/Homework/Ded_hometasks/educational_programming/hometask_1/quadratic_solver/quadratic_solver.h
+
+/home/sofya/Homework/Ded_hometasks/educational_programming/hometask_1/quadratic_solver/quadratic_solver.h
+cassert
+-
+complex
+-
+vector
+-
+
+/home/sofya/Homework/Ded_hometasks/educational_programming/hometask_1/quadratic_solver/test.cpp
+test.h
+/home/sofya/Homework/Ded_hometasks/educational_programming/hometask_1/quadratic_solver/test.h
+quadratic_solver.h
+/home/sofya/Homework/Ded_hometasks/educational_programming/hometask_1/quadratic_solver/quadratic_solver.h
+
+/home/sofya/Homework/Ded_hometasks/educational_programming/hometask_1/quadratic_solver/test.h
+cassert
+-
+complex
+-
+iostream
+-
+vector
+-
+
