@@ -1,7 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/Onegin_sort.dir/main.cpp.o"
   "CMakeFiles/Onegin_sort.dir/Book.cpp.o"
-  "CMakeFiles/Onegin_sort.dir/test.cpp.o"
   "Onegin_sort.pdb"
   "Onegin_sort"
 )

@@ -6,7 +6,6 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_CHECK_CXX
   "/home/sofya/Homework/Ded_hometasks/educational_programming/hometask_2/Onegin_sort/Book.cpp" "/home/sofya/Homework/Ded_hometasks/educational_programming/hometask_2/Onegin_sort/cmake-build-debug/CMakeFiles/Onegin_sort.dir/Book.cpp.o"
   "/home/sofya/Homework/Ded_hometasks/educational_programming/hometask_2/Onegin_sort/main.cpp" "/home/sofya/Homework/Ded_hometasks/educational_programming/hometask_2/Onegin_sort/cmake-build-debug/CMakeFiles/Onegin_sort.dir/main.cpp.o"
-  "/home/sofya/Homework/Ded_hometasks/educational_programming/hometask_2/Onegin_sort/test.cpp" "/home/sofya/Homework/Ded_hometasks/educational_programming/hometask_2/Onegin_sort/cmake-build-debug/CMakeFiles/Onegin_sort.dir/test.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

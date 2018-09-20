@@ -66,7 +66,7 @@ CMAKE_BINARY_DIR = /home/sofya/Homework/Ded_hometasks/educational_programming/ho
 CMakeFiles/Onegin_sort.dir/all:
 	$(MAKE) -f CMakeFiles/Onegin_sort.dir/build.make CMakeFiles/Onegin_sort.dir/depend
 	$(MAKE) -f CMakeFiles/Onegin_sort.dir/build.make CMakeFiles/Onegin_sort.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/sofya/Homework/Ded_hometasks/educational_programming/hometask_2/Onegin_sort/cmake-build-debug/CMakeFiles --progress-num=1,2,3,4 "Built target Onegin_sort"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/sofya/Homework/Ded_hometasks/educational_programming/hometask_2/Onegin_sort/cmake-build-debug/CMakeFiles --progress-num=1,2,3 "Built target Onegin_sort"
 .PHONY : CMakeFiles/Onegin_sort.dir/all
 
 # Include target in all.
@@ -76,7 +76,7 @@ all: CMakeFiles/Onegin_sort.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/Onegin_sort.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/sofya/Homework/Ded_hometasks/educational_programming/hometask_2/Onegin_sort/cmake-build-debug/CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/sofya/Homework/Ded_hometasks/educational_programming/hometask_2/Onegin_sort/cmake-build-debug/CMakeFiles 3
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/Onegin_sort.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/sofya/Homework/Ded_hometasks/educational_programming/hometask_2/Onegin_sort/cmake-build-debug/CMakeFiles 0
 .PHONY : CMakeFiles/Onegin_sort.dir/rule

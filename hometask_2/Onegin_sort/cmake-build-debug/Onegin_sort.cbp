@@ -93,12 +93,6 @@
 		<Unit filename="/home/sofya/Homework/Ded_hometasks/educational_programming/hometask_2/Onegin_sort/main.cpp">
 			<Option target="Onegin_sort"/>
 		</Unit>
-		<Unit filename="/home/sofya/Homework/Ded_hometasks/educational_programming/hometask_2/Onegin_sort/test.cpp">
-			<Option target="Onegin_sort"/>
-		</Unit>
-		<Unit filename="/home/sofya/Homework/Ded_hometasks/educational_programming/hometask_2/Onegin_sort/test.h">
-			<Option target="Onegin_sort"/>
-		</Unit>
 		<Unit filename="/home/sofya/Homework/Ded_hometasks/educational_programming/hometask_2/Onegin_sort/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>

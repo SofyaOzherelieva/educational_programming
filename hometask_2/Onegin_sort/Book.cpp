@@ -113,13 +113,15 @@ void Book::book_indexing() {
   assert("Memory allocation error" and array_of_lines_ != nullptr);
 
   // не учитываем первый символ '\0'
-  array_of_lines_[index] = {1, buffer_};
+  array_of_lines_[index].start_index_ = 1;
+  array_of_lines_[index].buffer_ = buffer_;
 
   // не учитываем первый и последний символ '\0'
   for (int i = 1; i < book_size_ - 1; i++) {
     if (buffer_[i] == '\0') {
       index++;
-      array_of_lines_[index] = {i + 1, buffer_};
+      array_of_lines_[index].start_index_ = i + 1;
+      array_of_lines_[index].buffer_ = buffer_;
     }
   }
 }

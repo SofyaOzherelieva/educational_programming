@@ -27,9 +27,9 @@ using namespace std::placeholders;
 struct Line {
 
   /// Позиция строки в тексте относительно начала текста.
-  int start_index_;
+  int start_index_{0};
   /// Указатель на начало текта в памяти.
-  char *buffer_;
+  char *buffer_{nullptr};
 
   /*!
    \brief Пропускает знаки препинания.
@@ -47,6 +47,7 @@ struct Line {
    * Считает символы с начала строки до первого встретившегося символа '\0'.
    */
   int length_of_line() const;
+
   /*!
    * @return является ли строка пустой
    *
@@ -90,13 +91,13 @@ class Book {
     void output(const char *filename) const;
 
   private:
-    FILE *book_;
+    FILE *book_{nullptr};
 
-    char *buffer_;
-    long long book_size_;
+    char *buffer_{nullptr};
+    long long book_size_{0};
 
-    Line *array_of_lines_;
-    long long num_of_lines_ = 0;
+    Line *array_of_lines_{nullptr};
+    long long num_of_lines_{0};
 
     /*!
      * Меняет '\n' на '\0' в буфере. Для упрощенного вывода конкретной строки.

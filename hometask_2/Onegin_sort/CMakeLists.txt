@@ -3,4 +3,4 @@ project(Onegin_sort)
 
 set(CMAKE_CXX_STANDARD 11)
 
-add_executable(Onegin_sort main.cpp Book.cpp Book.h test.cpp test.h)
+add_executable(Onegin_sort main.cpp Book.cpp Book.h)

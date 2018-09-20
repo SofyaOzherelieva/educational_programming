@@ -7,6 +7,3 @@ CMakeFiles/Onegin_sort.dir/Book.cpp.o: ../Book.h
 CMakeFiles/Onegin_sort.dir/main.cpp.o: ../Book.h
 CMakeFiles/Onegin_sort.dir/main.cpp.o: ../main.cpp
 
-CMakeFiles/Onegin_sort.dir/test.cpp.o: ../test.cpp
-CMakeFiles/Onegin_sort.dir/test.cpp.o: ../test.h
-

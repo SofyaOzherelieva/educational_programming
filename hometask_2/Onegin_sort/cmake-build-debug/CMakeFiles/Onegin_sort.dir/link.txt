@@ -1,1 +1,1 @@
-/usr/bin/c++  -g   CMakeFiles/Onegin_sort.dir/main.cpp.o CMakeFiles/Onegin_sort.dir/Book.cpp.o CMakeFiles/Onegin_sort.dir/test.cpp.o  -o Onegin_sort 
+/usr/bin/c++  -g   CMakeFiles/Onegin_sort.dir/main.cpp.o CMakeFiles/Onegin_sort.dir/Book.cpp.o  -o Onegin_sort 
