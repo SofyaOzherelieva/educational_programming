@@ -36,7 +36,7 @@ Book::Book(const char *filename) {
   };
 
   fseek(book_, 0, SEEK_END);
-  book_size_ = ftell(book_);
+  book_size_ = static_cast<size_t>(ftell(book_));
   rewind(book_);
 
   buffer_ = (char *) malloc(sizeof(char) * (book_size_ + 2));

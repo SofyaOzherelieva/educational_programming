@@ -94,10 +94,10 @@ class Book {
     FILE *book_{nullptr};
 
     char *buffer_{nullptr};
-    long long book_size_{0};
+    size_t book_size_{0};
 
     Line *array_of_lines_{nullptr};
-    long long num_of_lines_{0};
+    size_t num_of_lines_{0};
 
     /*!
      * Меняет '\n' на '\0' в буфере. Для упрощенного вывода конкретной строки.
