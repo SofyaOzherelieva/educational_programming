@@ -5,7 +5,7 @@
 #include <complex>
 #include <vector>
 
-#define EPSILON 0.001
+const double EPSILON = 0.001;
 
 using std::vector;
 

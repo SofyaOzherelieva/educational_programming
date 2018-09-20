@@ -8,13 +8,16 @@ int main() {
                                   {0,      3,      1},
                                   {4,      3,      2},
                                   {0.1,    0.2,    0.1},
-                                  {0.0001, 0.0001, 0.1},
-                                  {0,      0,      2}
+                                  //{0.0001, 0.0001, 0.1},
+                                  //{0,      0,      2},
+                                  {0, 0, 0}
   };
   /* you completely got away with input parsing, I wish you had done it, but okay */
   TestQuadraticSolver testQuadraticSolver(test);
   testQuadraticSolver.test_quadratic_solver();
 
+
+  /*
   std::cout << "Enter the coefficients of the quadratic equation.";
 
   vector<double> coefficients(3);
@@ -27,6 +30,6 @@ int main() {
   solver.quadratic_solver();
   for (auto answer: solver.answer_)
     std::cout << answer;
-
+*/
   return 0;
 }

@@ -3,4 +3,4 @@ project(quadratic_solver)
 
 set(CMAKE_CXX_STANDARD 11)
 
-add_executable(quadratic_solver main.cpp test.cpp quadratic_solver.h test.h quadratic_solver.cpp)
+add_executable(quadratic_solver main.cpp test.cpp test.h quadratic_solver.cpp quadratic_solver.h)

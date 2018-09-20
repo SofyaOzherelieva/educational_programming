@@ -7,8 +7,6 @@
 #include <iostream>
 #include <vector>
 
-#define EPSILON 0.001
-
 
 using std::vector;
 

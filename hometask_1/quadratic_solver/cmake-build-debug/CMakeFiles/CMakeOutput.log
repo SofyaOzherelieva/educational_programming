@@ -28,28 +28,28 @@ The CXX compiler identification is GNU, found in "/home/sofya/Homework/Ded_homet
 Determining if the C compiler works passed with the following output:
 Change Dir: /home/sofya/Homework/Ded_hometasks/educational_programming/hometask_1/quadratic_solver/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_2fd3d/fast"
-/usr/bin/make -f CMakeFiles/cmTC_2fd3d.dir/build.make CMakeFiles/cmTC_2fd3d.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_49741/fast"
+/usr/bin/make -f CMakeFiles/cmTC_49741.dir/build.make CMakeFiles/cmTC_49741.dir/build
 make[1]: Entering directory '/home/sofya/Homework/Ded_hometasks/educational_programming/hometask_1/quadratic_solver/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_2fd3d.dir/testCCompiler.c.o
-/usr/bin/cc    -o CMakeFiles/cmTC_2fd3d.dir/testCCompiler.c.o   -c /home/sofya/Homework/Ded_hometasks/educational_programming/hometask_1/quadratic_solver/cmake-build-debug/CMakeFiles/CMakeTmp/testCCompiler.c
-Linking C executable cmTC_2fd3d
-/home/sofya/Apps/clion-2017.3.3/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_2fd3d.dir/link.txt --verbose=1
-/usr/bin/cc      CMakeFiles/cmTC_2fd3d.dir/testCCompiler.c.o  -o cmTC_2fd3d 
+Building C object CMakeFiles/cmTC_49741.dir/testCCompiler.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_49741.dir/testCCompiler.c.o   -c /home/sofya/Homework/Ded_hometasks/educational_programming/hometask_1/quadratic_solver/cmake-build-debug/CMakeFiles/CMakeTmp/testCCompiler.c
+Linking C executable cmTC_49741
+/home/sofya/Apps/clion-2017.3.3/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_49741.dir/link.txt --verbose=1
+/usr/bin/cc      CMakeFiles/cmTC_49741.dir/testCCompiler.c.o  -o cmTC_49741 
 make[1]: Leaving directory '/home/sofya/Homework/Ded_hometasks/educational_programming/hometask_1/quadratic_solver/cmake-build-debug/CMakeFiles/CMakeTmp'
 
 
 Detecting C compiler ABI info compiled with the following output:
 Change Dir: /home/sofya/Homework/Ded_hometasks/educational_programming/hometask_1/quadratic_solver/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_b680f/fast"
-/usr/bin/make -f CMakeFiles/cmTC_b680f.dir/build.make CMakeFiles/cmTC_b680f.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_581cc/fast"
+/usr/bin/make -f CMakeFiles/cmTC_581cc.dir/build.make CMakeFiles/cmTC_581cc.dir/build
 make[1]: Entering directory '/home/sofya/Homework/Ded_hometasks/educational_programming/hometask_1/quadratic_solver/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_b680f.dir/CMakeCCompilerABI.c.o
-/usr/bin/cc    -o CMakeFiles/cmTC_b680f.dir/CMakeCCompilerABI.c.o   -c /home/sofya/Apps/clion-2017.3.3/bin/cmake/share/cmake-3.9/Modules/CMakeCCompilerABI.c
-Linking C executable cmTC_b680f
-/home/sofya/Apps/clion-2017.3.3/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b680f.dir/link.txt --verbose=1
-/usr/bin/cc     -v CMakeFiles/cmTC_b680f.dir/CMakeCCompilerABI.c.o  -o cmTC_b680f 
+Building C object CMakeFiles/cmTC_581cc.dir/CMakeCCompilerABI.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_581cc.dir/CMakeCCompilerABI.c.o   -c /home/sofya/Apps/clion-2017.3.3/bin/cmake/share/cmake-3.9/Modules/CMakeCCompilerABI.c
+Linking C executable cmTC_581cc
+/home/sofya/Apps/clion-2017.3.3/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_581cc.dir/link.txt --verbose=1
+/usr/bin/cc     -v CMakeFiles/cmTC_581cc.dir/CMakeCCompilerABI.c.o  -o cmTC_581cc 
 Using built-in specs.
 COLLECT_GCC=/usr/bin/cc
 COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper
@@ -61,9 +61,9 @@ Thread model: posix
 gcc version 7.3.0 (Ubuntu 7.3.0-16ubuntu3) 
 COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/
 LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../:/lib/:/usr/lib/
-COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_b680f' '-mtune=generic' '-march=x86-64'
- /usr/lib/gcc/x86_64-linux-gnu/7/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/7/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper -plugin-opt=-fresolution=/tmp/ccF9lhTZ.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_b680f /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/7/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/7 -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/7/../../.. CMakeFiles/cmTC_b680f.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/x86_64-linux-gnu/7/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crtn.o
-COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_b680f' '-mtune=generic' '-march=x86-64'
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_581cc' '-mtune=generic' '-march=x86-64'
+ /usr/lib/gcc/x86_64-linux-gnu/7/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/7/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper -plugin-opt=-fresolution=/tmp/ccPHAySc.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_581cc /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/7/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/7 -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/7/../../.. CMakeFiles/cmTC_581cc.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/x86_64-linux-gnu/7/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crtn.o
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_581cc' '-mtune=generic' '-march=x86-64'
 make[1]: Leaving directory '/home/sofya/Homework/Ded_hometasks/educational_programming/hometask_1/quadratic_solver/cmake-build-debug/CMakeFiles/CMakeTmp'
 
 
@@ -71,14 +71,14 @@ Parsed C implicit link information from above output:
   link line regex: [^( *|.*[/\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
   ignore line: [Change Dir: /home/sofya/Homework/Ded_hometasks/educational_programming/hometask_1/quadratic_solver/cmake-build-debug/CMakeFiles/CMakeTmp]
   ignore line: []
-  ignore line: [Run Build Command:"/usr/bin/make" "cmTC_b680f/fast"]
-  ignore line: [/usr/bin/make -f CMakeFiles/cmTC_b680f.dir/build.make CMakeFiles/cmTC_b680f.dir/build]
+  ignore line: [Run Build Command:"/usr/bin/make" "cmTC_581cc/fast"]
+  ignore line: [/usr/bin/make -f CMakeFiles/cmTC_581cc.dir/build.make CMakeFiles/cmTC_581cc.dir/build]
   ignore line: [make[1]: Entering directory '/home/sofya/Homework/Ded_hometasks/educational_programming/hometask_1/quadratic_solver/cmake-build-debug/CMakeFiles/CMakeTmp']
-  ignore line: [Building C object CMakeFiles/cmTC_b680f.dir/CMakeCCompilerABI.c.o]
-  ignore line: [/usr/bin/cc    -o CMakeFiles/cmTC_b680f.dir/CMakeCCompilerABI.c.o   -c /home/sofya/Apps/clion-2017.3.3/bin/cmake/share/cmake-3.9/Modules/CMakeCCompilerABI.c]
-  ignore line: [Linking C executable cmTC_b680f]
-  ignore line: [/home/sofya/Apps/clion-2017.3.3/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b680f.dir/link.txt --verbose=1]
-  ignore line: [/usr/bin/cc     -v CMakeFiles/cmTC_b680f.dir/CMakeCCompilerABI.c.o  -o cmTC_b680f ]
+  ignore line: [Building C object CMakeFiles/cmTC_581cc.dir/CMakeCCompilerABI.c.o]
+  ignore line: [/usr/bin/cc    -o CMakeFiles/cmTC_581cc.dir/CMakeCCompilerABI.c.o   -c /home/sofya/Apps/clion-2017.3.3/bin/cmake/share/cmake-3.9/Modules/CMakeCCompilerABI.c]
+  ignore line: [Linking C executable cmTC_581cc]
+  ignore line: [/home/sofya/Apps/clion-2017.3.3/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_581cc.dir/link.txt --verbose=1]
+  ignore line: [/usr/bin/cc     -v CMakeFiles/cmTC_581cc.dir/CMakeCCompilerABI.c.o  -o cmTC_581cc ]
   ignore line: [Using built-in specs.]
   ignore line: [COLLECT_GCC=/usr/bin/cc]
   ignore line: [COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper]
@@ -90,13 +90,13 @@ Parsed C implicit link information from above output:
   ignore line: [gcc version 7.3.0 (Ubuntu 7.3.0-16ubuntu3) ]
   ignore line: [COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/]
   ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../:/lib/:/usr/lib/]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_b680f' '-mtune=generic' '-march=x86-64']
-  link line: [ /usr/lib/gcc/x86_64-linux-gnu/7/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/7/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper -plugin-opt=-fresolution=/tmp/ccF9lhTZ.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_b680f /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/7/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/7 -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/7/../../.. CMakeFiles/cmTC_b680f.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/x86_64-linux-gnu/7/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crtn.o]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_581cc' '-mtune=generic' '-march=x86-64']
+  link line: [ /usr/lib/gcc/x86_64-linux-gnu/7/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/7/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper -plugin-opt=-fresolution=/tmp/ccPHAySc.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_581cc /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/7/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/7 -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/7/../../.. CMakeFiles/cmTC_581cc.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/x86_64-linux-gnu/7/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crtn.o]
     arg [/usr/lib/gcc/x86_64-linux-gnu/7/collect2] ==> ignore
     arg [-plugin] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/7/liblto_plugin.so] ==> ignore
     arg [-plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper] ==> ignore
-    arg [-plugin-opt=-fresolution=/tmp/ccF9lhTZ.res] ==> ignore
+    arg [-plugin-opt=-fresolution=/tmp/ccPHAySc.res] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
     arg [-plugin-opt=-pass-through=-lc] ==> ignore
@@ -115,7 +115,7 @@ Parsed C implicit link information from above output:
     arg [-znow] ==> ignore
     arg [-zrelro] ==> ignore
     arg [-o] ==> ignore
-    arg [cmTC_b680f] ==> ignore
+    arg [cmTC_581cc] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/Scrt1.o] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crti.o] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/7/crtbeginS.o] ==> ignore
@@ -127,7 +127,7 @@ Parsed C implicit link information from above output:
     arg [-L/usr/lib/x86_64-linux-gnu] ==> dir [/usr/lib/x86_64-linux-gnu]
     arg [-L/usr/lib/../lib] ==> dir [/usr/lib/../lib]
     arg [-L/usr/lib/gcc/x86_64-linux-gnu/7/../../..] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/7/../../..]
-    arg [CMakeFiles/cmTC_b680f.dir/CMakeCCompilerABI.c.o] ==> ignore
+    arg [CMakeFiles/cmTC_581cc.dir/CMakeCCompilerABI.c.o] ==> ignore
     arg [-lgcc] ==> lib [gcc]
     arg [--push-state] ==> ignore
     arg [--as-needed] ==> ignore
@@ -159,14 +159,14 @@ Parsed C implicit link information from above output:
 Detecting C [-std=c11] compiler features compiled with the following output:
 Change Dir: /home/sofya/Homework/Ded_hometasks/educational_programming/hometask_1/quadratic_solver/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_e4b93/fast"
-/usr/bin/make -f CMakeFiles/cmTC_e4b93.dir/build.make CMakeFiles/cmTC_e4b93.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_ffd7e/fast"
+/usr/bin/make -f CMakeFiles/cmTC_ffd7e.dir/build.make CMakeFiles/cmTC_ffd7e.dir/build
 make[1]: Entering directory '/home/sofya/Homework/Ded_hometasks/educational_programming/hometask_1/quadratic_solver/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_e4b93.dir/feature_tests.c.o
-/usr/bin/cc   -std=c11 -o CMakeFiles/cmTC_e4b93.dir/feature_tests.c.o   -c /home/sofya/Homework/Ded_hometasks/educational_programming/hometask_1/quadratic_solver/cmake-build-debug/CMakeFiles/feature_tests.c
-Linking C executable cmTC_e4b93
-/home/sofya/Apps/clion-2017.3.3/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e4b93.dir/link.txt --verbose=1
-/usr/bin/cc      CMakeFiles/cmTC_e4b93.dir/feature_tests.c.o  -o cmTC_e4b93 
+Building C object CMakeFiles/cmTC_ffd7e.dir/feature_tests.c.o
+/usr/bin/cc   -std=c11 -o CMakeFiles/cmTC_ffd7e.dir/feature_tests.c.o   -c /home/sofya/Homework/Ded_hometasks/educational_programming/hometask_1/quadratic_solver/cmake-build-debug/CMakeFiles/feature_tests.c
+Linking C executable cmTC_ffd7e
+/home/sofya/Apps/clion-2017.3.3/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ffd7e.dir/link.txt --verbose=1
+/usr/bin/cc      CMakeFiles/cmTC_ffd7e.dir/feature_tests.c.o  -o cmTC_ffd7e 
 make[1]: Leaving directory '/home/sofya/Homework/Ded_hometasks/educational_programming/hometask_1/quadratic_solver/cmake-build-debug/CMakeFiles/CMakeTmp'
 
 
@@ -179,14 +179,14 @@ make[1]: Leaving directory '/home/sofya/Homework/Ded_hometasks/educational_progr
 Detecting C [-std=c99] compiler features compiled with the following output:
 Change Dir: /home/sofya/Homework/Ded_hometasks/educational_programming/hometask_1/quadratic_solver/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_67286/fast"
-/usr/bin/make -f CMakeFiles/cmTC_67286.dir/build.make CMakeFiles/cmTC_67286.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_7f792/fast"
+/usr/bin/make -f CMakeFiles/cmTC_7f792.dir/build.make CMakeFiles/cmTC_7f792.dir/build
 make[1]: Entering directory '/home/sofya/Homework/Ded_hometasks/educational_programming/hometask_1/quadratic_solver/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_67286.dir/feature_tests.c.o
-/usr/bin/cc   -std=c99 -o CMakeFiles/cmTC_67286.dir/feature_tests.c.o   -c /home/sofya/Homework/Ded_hometasks/educational_programming/hometask_1/quadratic_solver/cmake-build-debug/CMakeFiles/feature_tests.c
-Linking C executable cmTC_67286
-/home/sofya/Apps/clion-2017.3.3/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_67286.dir/link.txt --verbose=1
-/usr/bin/cc      CMakeFiles/cmTC_67286.dir/feature_tests.c.o  -o cmTC_67286 
+Building C object CMakeFiles/cmTC_7f792.dir/feature_tests.c.o
+/usr/bin/cc   -std=c99 -o CMakeFiles/cmTC_7f792.dir/feature_tests.c.o   -c /home/sofya/Homework/Ded_hometasks/educational_programming/hometask_1/quadratic_solver/cmake-build-debug/CMakeFiles/feature_tests.c
+Linking C executable cmTC_7f792
+/home/sofya/Apps/clion-2017.3.3/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_7f792.dir/link.txt --verbose=1
+/usr/bin/cc      CMakeFiles/cmTC_7f792.dir/feature_tests.c.o  -o cmTC_7f792 
 make[1]: Leaving directory '/home/sofya/Homework/Ded_hometasks/educational_programming/hometask_1/quadratic_solver/cmake-build-debug/CMakeFiles/CMakeTmp'
 
 
@@ -199,14 +199,14 @@ make[1]: Leaving directory '/home/sofya/Homework/Ded_hometasks/educational_progr
 Detecting C [-std=c90] compiler features compiled with the following output:
 Change Dir: /home/sofya/Homework/Ded_hometasks/educational_programming/hometask_1/quadratic_solver/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_46076/fast"
-/usr/bin/make -f CMakeFiles/cmTC_46076.dir/build.make CMakeFiles/cmTC_46076.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_2f0b2/fast"
+/usr/bin/make -f CMakeFiles/cmTC_2f0b2.dir/build.make CMakeFiles/cmTC_2f0b2.dir/build
 make[1]: Entering directory '/home/sofya/Homework/Ded_hometasks/educational_programming/hometask_1/quadratic_solver/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_46076.dir/feature_tests.c.o
-/usr/bin/cc   -std=c90 -o CMakeFiles/cmTC_46076.dir/feature_tests.c.o   -c /home/sofya/Homework/Ded_hometasks/educational_programming/hometask_1/quadratic_solver/cmake-build-debug/CMakeFiles/feature_tests.c
-Linking C executable cmTC_46076
-/home/sofya/Apps/clion-2017.3.3/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_46076.dir/link.txt --verbose=1
-/usr/bin/cc      CMakeFiles/cmTC_46076.dir/feature_tests.c.o  -o cmTC_46076 
+Building C object CMakeFiles/cmTC_2f0b2.dir/feature_tests.c.o
+/usr/bin/cc   -std=c90 -o CMakeFiles/cmTC_2f0b2.dir/feature_tests.c.o   -c /home/sofya/Homework/Ded_hometasks/educational_programming/hometask_1/quadratic_solver/cmake-build-debug/CMakeFiles/feature_tests.c
+Linking C executable cmTC_2f0b2
+/home/sofya/Apps/clion-2017.3.3/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_2f0b2.dir/link.txt --verbose=1
+/usr/bin/cc      CMakeFiles/cmTC_2f0b2.dir/feature_tests.c.o  -o cmTC_2f0b2 
 make[1]: Leaving directory '/home/sofya/Homework/Ded_hometasks/educational_programming/hometask_1/quadratic_solver/cmake-build-debug/CMakeFiles/CMakeTmp'
 
 
@@ -217,28 +217,28 @@ make[1]: Leaving directory '/home/sofya/Homework/Ded_hometasks/educational_progr
 Determining if the CXX compiler works passed with the following output:
 Change Dir: /home/sofya/Homework/Ded_hometasks/educational_programming/hometask_1/quadratic_solver/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_d5c0f/fast"
-/usr/bin/make -f CMakeFiles/cmTC_d5c0f.dir/build.make CMakeFiles/cmTC_d5c0f.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_42295/fast"
+/usr/bin/make -f CMakeFiles/cmTC_42295.dir/build.make CMakeFiles/cmTC_42295.dir/build
 make[1]: Entering directory '/home/sofya/Homework/Ded_hometasks/educational_programming/hometask_1/quadratic_solver/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_d5c0f.dir/testCXXCompiler.cxx.o
-/usr/bin/c++     -o CMakeFiles/cmTC_d5c0f.dir/testCXXCompiler.cxx.o -c /home/sofya/Homework/Ded_hometasks/educational_programming/hometask_1/quadratic_solver/cmake-build-debug/CMakeFiles/CMakeTmp/testCXXCompiler.cxx
-Linking CXX executable cmTC_d5c0f
-/home/sofya/Apps/clion-2017.3.3/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d5c0f.dir/link.txt --verbose=1
-/usr/bin/c++       CMakeFiles/cmTC_d5c0f.dir/testCXXCompiler.cxx.o  -o cmTC_d5c0f 
+Building CXX object CMakeFiles/cmTC_42295.dir/testCXXCompiler.cxx.o
+/usr/bin/c++     -o CMakeFiles/cmTC_42295.dir/testCXXCompiler.cxx.o -c /home/sofya/Homework/Ded_hometasks/educational_programming/hometask_1/quadratic_solver/cmake-build-debug/CMakeFiles/CMakeTmp/testCXXCompiler.cxx
+Linking CXX executable cmTC_42295
+/home/sofya/Apps/clion-2017.3.3/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_42295.dir/link.txt --verbose=1
+/usr/bin/c++       CMakeFiles/cmTC_42295.dir/testCXXCompiler.cxx.o  -o cmTC_42295 
 make[1]: Leaving directory '/home/sofya/Homework/Ded_hometasks/educational_programming/hometask_1/quadratic_solver/cmake-build-debug/CMakeFiles/CMakeTmp'
 
 
 Detecting CXX compiler ABI info compiled with the following output:
 Change Dir: /home/sofya/Homework/Ded_hometasks/educational_programming/hometask_1/quadratic_solver/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_b77ae/fast"
-/usr/bin/make -f CMakeFiles/cmTC_b77ae.dir/build.make CMakeFiles/cmTC_b77ae.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_096f3/fast"
+/usr/bin/make -f CMakeFiles/cmTC_096f3.dir/build.make CMakeFiles/cmTC_096f3.dir/build
 make[1]: Entering directory '/home/sofya/Homework/Ded_hometasks/educational_programming/hometask_1/quadratic_solver/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_b77ae.dir/CMakeCXXCompilerABI.cpp.o
-/usr/bin/c++     -o CMakeFiles/cmTC_b77ae.dir/CMakeCXXCompilerABI.cpp.o -c /home/sofya/Apps/clion-2017.3.3/bin/cmake/share/cmake-3.9/Modules/CMakeCXXCompilerABI.cpp
-Linking CXX executable cmTC_b77ae
-/home/sofya/Apps/clion-2017.3.3/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b77ae.dir/link.txt --verbose=1
-/usr/bin/c++      -v CMakeFiles/cmTC_b77ae.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_b77ae 
+Building CXX object CMakeFiles/cmTC_096f3.dir/CMakeCXXCompilerABI.cpp.o
+/usr/bin/c++     -o CMakeFiles/cmTC_096f3.dir/CMakeCXXCompilerABI.cpp.o -c /home/sofya/Apps/clion-2017.3.3/bin/cmake/share/cmake-3.9/Modules/CMakeCXXCompilerABI.cpp
+Linking CXX executable cmTC_096f3
+/home/sofya/Apps/clion-2017.3.3/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_096f3.dir/link.txt --verbose=1
+/usr/bin/c++      -v CMakeFiles/cmTC_096f3.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_096f3 
 Using built-in specs.
 COLLECT_GCC=/usr/bin/c++
 COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper
@@ -250,9 +250,9 @@ Thread model: posix
 gcc version 7.3.0 (Ubuntu 7.3.0-16ubuntu3) 
 COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/
 LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../:/lib/:/usr/lib/
-COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_b77ae' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
- /usr/lib/gcc/x86_64-linux-gnu/7/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/7/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper -plugin-opt=-fresolution=/tmp/ccBL80uN.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_b77ae /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/7/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/7 -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/7/../../.. CMakeFiles/cmTC_b77ae.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/7/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crtn.o
-COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_b77ae' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_096f3' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
+ /usr/lib/gcc/x86_64-linux-gnu/7/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/7/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper -plugin-opt=-fresolution=/tmp/cccLKPsZ.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_096f3 /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/7/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/7 -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/7/../../.. CMakeFiles/cmTC_096f3.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/7/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crtn.o
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_096f3' '-shared-libgcc' '-mtune=generic' '-march=x86-64'
 make[1]: Leaving directory '/home/sofya/Homework/Ded_hometasks/educational_programming/hometask_1/quadratic_solver/cmake-build-debug/CMakeFiles/CMakeTmp'
 
 
@@ -260,14 +260,14 @@ Parsed CXX implicit link information from above output:
   link line regex: [^( *|.*[/\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
   ignore line: [Change Dir: /home/sofya/Homework/Ded_hometasks/educational_programming/hometask_1/quadratic_solver/cmake-build-debug/CMakeFiles/CMakeTmp]
   ignore line: []
-  ignore line: [Run Build Command:"/usr/bin/make" "cmTC_b77ae/fast"]
-  ignore line: [/usr/bin/make -f CMakeFiles/cmTC_b77ae.dir/build.make CMakeFiles/cmTC_b77ae.dir/build]
+  ignore line: [Run Build Command:"/usr/bin/make" "cmTC_096f3/fast"]
+  ignore line: [/usr/bin/make -f CMakeFiles/cmTC_096f3.dir/build.make CMakeFiles/cmTC_096f3.dir/build]
   ignore line: [make[1]: Entering directory '/home/sofya/Homework/Ded_hometasks/educational_programming/hometask_1/quadratic_solver/cmake-build-debug/CMakeFiles/CMakeTmp']
-  ignore line: [Building CXX object CMakeFiles/cmTC_b77ae.dir/CMakeCXXCompilerABI.cpp.o]
-  ignore line: [/usr/bin/c++     -o CMakeFiles/cmTC_b77ae.dir/CMakeCXXCompilerABI.cpp.o -c /home/sofya/Apps/clion-2017.3.3/bin/cmake/share/cmake-3.9/Modules/CMakeCXXCompilerABI.cpp]
-  ignore line: [Linking CXX executable cmTC_b77ae]
-  ignore line: [/home/sofya/Apps/clion-2017.3.3/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b77ae.dir/link.txt --verbose=1]
-  ignore line: [/usr/bin/c++      -v CMakeFiles/cmTC_b77ae.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_b77ae ]
+  ignore line: [Building CXX object CMakeFiles/cmTC_096f3.dir/CMakeCXXCompilerABI.cpp.o]
+  ignore line: [/usr/bin/c++     -o CMakeFiles/cmTC_096f3.dir/CMakeCXXCompilerABI.cpp.o -c /home/sofya/Apps/clion-2017.3.3/bin/cmake/share/cmake-3.9/Modules/CMakeCXXCompilerABI.cpp]
+  ignore line: [Linking CXX executable cmTC_096f3]
+  ignore line: [/home/sofya/Apps/clion-2017.3.3/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_096f3.dir/link.txt --verbose=1]
+  ignore line: [/usr/bin/c++      -v CMakeFiles/cmTC_096f3.dir/CMakeCXXCompilerABI.cpp.o  -o cmTC_096f3 ]
   ignore line: [Using built-in specs.]
   ignore line: [COLLECT_GCC=/usr/bin/c++]
   ignore line: [COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper]
@@ -279,13 +279,13 @@ Parsed CXX implicit link information from above output:
   ignore line: [gcc version 7.3.0 (Ubuntu 7.3.0-16ubuntu3) ]
   ignore line: [COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/]
   ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../:/lib/:/usr/lib/]
-  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_b77ae' '-shared-libgcc' '-mtune=generic' '-march=x86-64']
-  link line: [ /usr/lib/gcc/x86_64-linux-gnu/7/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/7/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper -plugin-opt=-fresolution=/tmp/ccBL80uN.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_b77ae /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/7/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/7 -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/7/../../.. CMakeFiles/cmTC_b77ae.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/7/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crtn.o]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_096f3' '-shared-libgcc' '-mtune=generic' '-march=x86-64']
+  link line: [ /usr/lib/gcc/x86_64-linux-gnu/7/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/7/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper -plugin-opt=-fresolution=/tmp/cccLKPsZ.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_096f3 /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/7/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/7 -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/7/../../.. CMakeFiles/cmTC_096f3.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-linux-gnu/7/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crtn.o]
     arg [/usr/lib/gcc/x86_64-linux-gnu/7/collect2] ==> ignore
     arg [-plugin] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/7/liblto_plugin.so] ==> ignore
     arg [-plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper] ==> ignore
-    arg [-plugin-opt=-fresolution=/tmp/ccBL80uN.res] ==> ignore
+    arg [-plugin-opt=-fresolution=/tmp/cccLKPsZ.res] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
     arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
     arg [-plugin-opt=-pass-through=-lc] ==> ignore
@@ -304,7 +304,7 @@ Parsed CXX implicit link information from above output:
     arg [-znow] ==> ignore
     arg [-zrelro] ==> ignore
     arg [-o] ==> ignore
-    arg [cmTC_b77ae] ==> ignore
+    arg [cmTC_096f3] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/Scrt1.o] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crti.o] ==> ignore
     arg [/usr/lib/gcc/x86_64-linux-gnu/7/crtbeginS.o] ==> ignore
@@ -316,7 +316,7 @@ Parsed CXX implicit link information from above output:
     arg [-L/usr/lib/x86_64-linux-gnu] ==> dir [/usr/lib/x86_64-linux-gnu]
     arg [-L/usr/lib/../lib] ==> dir [/usr/lib/../lib]
     arg [-L/usr/lib/gcc/x86_64-linux-gnu/7/../../..] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/7/../../..]
-    arg [CMakeFiles/cmTC_b77ae.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+    arg [CMakeFiles/cmTC_096f3.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
     arg [-lstdc++] ==> lib [stdc++]
     arg [-lm] ==> lib [m]
     arg [-lgcc_s] ==> lib [gcc_s]
@@ -344,14 +344,14 @@ Parsed CXX implicit link information from above output:
 Detecting CXX [-std=c++1z] compiler features compiled with the following output:
 Change Dir: /home/sofya/Homework/Ded_hometasks/educational_programming/hometask_1/quadratic_solver/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_444e8/fast"
-/usr/bin/make -f CMakeFiles/cmTC_444e8.dir/build.make CMakeFiles/cmTC_444e8.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_95d1b/fast"
+/usr/bin/make -f CMakeFiles/cmTC_95d1b.dir/build.make CMakeFiles/cmTC_95d1b.dir/build
 make[1]: Entering directory '/home/sofya/Homework/Ded_hometasks/educational_programming/hometask_1/quadratic_solver/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_444e8.dir/feature_tests.cxx.o
-/usr/bin/c++    -std=c++1z -o CMakeFiles/cmTC_444e8.dir/feature_tests.cxx.o -c /home/sofya/Homework/Ded_hometasks/educational_programming/hometask_1/quadratic_solver/cmake-build-debug/CMakeFiles/feature_tests.cxx
-Linking CXX executable cmTC_444e8
-/home/sofya/Apps/clion-2017.3.3/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_444e8.dir/link.txt --verbose=1
-/usr/bin/c++       CMakeFiles/cmTC_444e8.dir/feature_tests.cxx.o  -o cmTC_444e8 
+Building CXX object CMakeFiles/cmTC_95d1b.dir/feature_tests.cxx.o
+/usr/bin/c++    -std=c++1z -o CMakeFiles/cmTC_95d1b.dir/feature_tests.cxx.o -c /home/sofya/Homework/Ded_hometasks/educational_programming/hometask_1/quadratic_solver/cmake-build-debug/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_95d1b
+/home/sofya/Apps/clion-2017.3.3/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_95d1b.dir/link.txt --verbose=1
+/usr/bin/c++       CMakeFiles/cmTC_95d1b.dir/feature_tests.cxx.o  -o cmTC_95d1b 
 make[1]: Leaving directory '/home/sofya/Homework/Ded_hometasks/educational_programming/hometask_1/quadratic_solver/cmake-build-debug/CMakeFiles/CMakeTmp'
 
 
@@ -417,14 +417,14 @@ make[1]: Leaving directory '/home/sofya/Homework/Ded_hometasks/educational_progr
 Detecting CXX [-std=c++14] compiler features compiled with the following output:
 Change Dir: /home/sofya/Homework/Ded_hometasks/educational_programming/hometask_1/quadratic_solver/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_d4cf7/fast"
-/usr/bin/make -f CMakeFiles/cmTC_d4cf7.dir/build.make CMakeFiles/cmTC_d4cf7.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_f66c3/fast"
+/usr/bin/make -f CMakeFiles/cmTC_f66c3.dir/build.make CMakeFiles/cmTC_f66c3.dir/build
 make[1]: Entering directory '/home/sofya/Homework/Ded_hometasks/educational_programming/hometask_1/quadratic_solver/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_d4cf7.dir/feature_tests.cxx.o
-/usr/bin/c++    -std=c++14 -o CMakeFiles/cmTC_d4cf7.dir/feature_tests.cxx.o -c /home/sofya/Homework/Ded_hometasks/educational_programming/hometask_1/quadratic_solver/cmake-build-debug/CMakeFiles/feature_tests.cxx
-Linking CXX executable cmTC_d4cf7
-/home/sofya/Apps/clion-2017.3.3/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d4cf7.dir/link.txt --verbose=1
-/usr/bin/c++       CMakeFiles/cmTC_d4cf7.dir/feature_tests.cxx.o  -o cmTC_d4cf7 
+Building CXX object CMakeFiles/cmTC_f66c3.dir/feature_tests.cxx.o
+/usr/bin/c++    -std=c++14 -o CMakeFiles/cmTC_f66c3.dir/feature_tests.cxx.o -c /home/sofya/Homework/Ded_hometasks/educational_programming/hometask_1/quadratic_solver/cmake-build-debug/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_f66c3
+/home/sofya/Apps/clion-2017.3.3/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f66c3.dir/link.txt --verbose=1
+/usr/bin/c++       CMakeFiles/cmTC_f66c3.dir/feature_tests.cxx.o  -o cmTC_f66c3 
 make[1]: Leaving directory '/home/sofya/Homework/Ded_hometasks/educational_programming/hometask_1/quadratic_solver/cmake-build-debug/CMakeFiles/CMakeTmp'
 
 
@@ -490,14 +490,14 @@ make[1]: Leaving directory '/home/sofya/Homework/Ded_hometasks/educational_progr
 Detecting CXX [-std=c++11] compiler features compiled with the following output:
 Change Dir: /home/sofya/Homework/Ded_hometasks/educational_programming/hometask_1/quadratic_solver/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_82182/fast"
-/usr/bin/make -f CMakeFiles/cmTC_82182.dir/build.make CMakeFiles/cmTC_82182.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_59c96/fast"
+/usr/bin/make -f CMakeFiles/cmTC_59c96.dir/build.make CMakeFiles/cmTC_59c96.dir/build
 make[1]: Entering directory '/home/sofya/Homework/Ded_hometasks/educational_programming/hometask_1/quadratic_solver/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_82182.dir/feature_tests.cxx.o
-/usr/bin/c++    -std=c++11 -o CMakeFiles/cmTC_82182.dir/feature_tests.cxx.o -c /home/sofya/Homework/Ded_hometasks/educational_programming/hometask_1/quadratic_solver/cmake-build-debug/CMakeFiles/feature_tests.cxx
-Linking CXX executable cmTC_82182
-/home/sofya/Apps/clion-2017.3.3/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_82182.dir/link.txt --verbose=1
-/usr/bin/c++       CMakeFiles/cmTC_82182.dir/feature_tests.cxx.o  -o cmTC_82182 
+Building CXX object CMakeFiles/cmTC_59c96.dir/feature_tests.cxx.o
+/usr/bin/c++    -std=c++11 -o CMakeFiles/cmTC_59c96.dir/feature_tests.cxx.o -c /home/sofya/Homework/Ded_hometasks/educational_programming/hometask_1/quadratic_solver/cmake-build-debug/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_59c96
+/home/sofya/Apps/clion-2017.3.3/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_59c96.dir/link.txt --verbose=1
+/usr/bin/c++       CMakeFiles/cmTC_59c96.dir/feature_tests.cxx.o  -o cmTC_59c96 
 make[1]: Leaving directory '/home/sofya/Homework/Ded_hometasks/educational_programming/hometask_1/quadratic_solver/cmake-build-debug/CMakeFiles/CMakeTmp'
 
 
@@ -563,14 +563,14 @@ make[1]: Leaving directory '/home/sofya/Homework/Ded_hometasks/educational_progr
 Detecting CXX [-std=c++98] compiler features compiled with the following output:
 Change Dir: /home/sofya/Homework/Ded_hometasks/educational_programming/hometask_1/quadratic_solver/cmake-build-debug/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_88bbb/fast"
-/usr/bin/make -f CMakeFiles/cmTC_88bbb.dir/build.make CMakeFiles/cmTC_88bbb.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_1b921/fast"
+/usr/bin/make -f CMakeFiles/cmTC_1b921.dir/build.make CMakeFiles/cmTC_1b921.dir/build
 make[1]: Entering directory '/home/sofya/Homework/Ded_hometasks/educational_programming/hometask_1/quadratic_solver/cmake-build-debug/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_88bbb.dir/feature_tests.cxx.o
-/usr/bin/c++    -std=c++98 -o CMakeFiles/cmTC_88bbb.dir/feature_tests.cxx.o -c /home/sofya/Homework/Ded_hometasks/educational_programming/hometask_1/quadratic_solver/cmake-build-debug/CMakeFiles/feature_tests.cxx
-Linking CXX executable cmTC_88bbb
-/home/sofya/Apps/clion-2017.3.3/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_88bbb.dir/link.txt --verbose=1
-/usr/bin/c++       CMakeFiles/cmTC_88bbb.dir/feature_tests.cxx.o  -o cmTC_88bbb 
+Building CXX object CMakeFiles/cmTC_1b921.dir/feature_tests.cxx.o
+/usr/bin/c++    -std=c++98 -o CMakeFiles/cmTC_1b921.dir/feature_tests.cxx.o -c /home/sofya/Homework/Ded_hometasks/educational_programming/hometask_1/quadratic_solver/cmake-build-debug/CMakeFiles/feature_tests.cxx
+Linking CXX executable cmTC_1b921
+/home/sofya/Apps/clion-2017.3.3/bin/cmake/bin/cmake -E cmake_link_script CMakeFiles/cmTC_1b921.dir/link.txt --verbose=1
+/usr/bin/c++       CMakeFiles/cmTC_1b921.dir/feature_tests.cxx.o  -o cmTC_1b921 
 make[1]: Leaving directory '/home/sofya/Homework/Ded_hometasks/educational_programming/hometask_1/quadratic_solver/cmake-build-debug/CMakeFiles/CMakeTmp'
 
 

@@ -11,9 +11,9 @@ void TestQuadraticSolver::better_assert(vector<double> &coefficients) {
   quadraticSolver.quadratic_solver();
 
   for (int i = 0; i < quadraticSolver.answer_.size(); i++) {
-    assert(
+    assert("The test failed" and
       std::norm(quadraticSolver.answer_[i] * quadraticSolver.answer_[i] * coefficients[0] +
-                quadraticSolver.answer_[i] * coefficients[1] + coefficients[2]) < EPSILON and "The test failed");
+                quadraticSolver.answer_[i] * coefficients[1] + coefficients[2]) < EPSILON);
   }
 }
 
