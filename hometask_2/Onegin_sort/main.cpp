@@ -7,10 +7,10 @@ int main(int argv, char *argc[]) {
 
   Book book(filename);
 
-  book.sort();
+  sort(book);
   book.output("sort.txt");
 
-  book.reverse_sort();
+  reverse_sort(book);
   book.output("rev_sort.txt");
   return 0;
 }

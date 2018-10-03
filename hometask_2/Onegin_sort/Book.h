@@ -18,6 +18,7 @@ using namespace std::placeholders;
     Сортировка проходит без учета порядка и знаков препинания.
 */
 
+
 ///@{
 
 /*!
@@ -26,10 +27,8 @@ using namespace std::placeholders;
  */
 struct Line {
 
-  /// Позиция строки в тексте относительно начала текста.
-  int start_index_{0};
-  /// Указатель на начало текта в памяти.
-  char *buffer_{nullptr};
+  /// Начало строки
+  char* start_index_{nullptr};
 
   /*!
    \brief Пропускает знаки препинания.
@@ -75,12 +74,6 @@ class Book {
 
     ~Book();
 
-    /// Сортирует строки без учета знаком препинания и регистра слева направо.
-    void sort();
-
-    /// Сравнивает строки без учета знаком препинания и регистра справа налево.
-    void reverse_sort();
-
     /*!
      *
      * @param filename дескриптор файла для записи
@@ -90,29 +83,45 @@ class Book {
      */
     void output(const char *filename) const;
 
-  private:
-    FILE *book_{nullptr};
-
-    char *buffer_{nullptr};
-    size_t book_size_{0};
-
+    /// Массив указателей на строки.
     Line *array_of_lines_{nullptr};
+    /// Количество строк.
     size_t num_of_lines_{0};
-
-    /*!
-     * Меняет '\n' на '\0' в буфере. Для упрощенного вывода конкретной строки.
-     */
-    void change_n_to_o();
 
     /*!
      * Заполняет array_of_lines_.
      */
     void book_indexing();
 
-    bool comparator(const Line &line1, const Line &line2);
+  private:
+    /// Дескриптор файла, в котором лежит книга.
+    FILE *book_{nullptr};
 
-    bool reverse_comparator(const Line &line1, const Line &line2);
+    /// Буффер для хранения текста в памяти.
+    char *buffer_{nullptr};
+
+    /// Размер книги в байтах.
+    size_t book_size_{0};
+
+    /*!
+     * Меняет '\n' на '\0' в буфере. Для упрощенного вывода конкретной строки.
+     */
+    void change_n_to_o();
 };
 ///@}
+
+
+/// Сортирует строки без учета знаком препинания и регистра слева направо.
+void sort(Book& book);
+
+/// Сравнивает строки без учета знаком препинания и регистра справа налево.
+void reverse_sort(Book& book);
+
+/// Компаратор для сравнения строк без учета знаком препинания и регистра слева направо.
+bool comparator(const Line &line1, const Line &line2);
+
+/// Компаратор строки без учета знаком препинания и регистра справа налево.
+bool reverse_comparator(const Line &line1, const Line &line2);
+
 
 #endif //ONEGIN_SORT_BOOK_H

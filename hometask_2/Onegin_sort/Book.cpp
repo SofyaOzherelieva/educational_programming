@@ -5,7 +5,7 @@
 #include "Book.h"
 
 void Line::skip_punctuation_marks(int *index, bool is_reverse) const {
-  while (!isalpha(buffer_[start_index_ + *index]) && buffer_[start_index_ + *index] != '\0') {
+  while (!isalpha(start_index_[*index]) && start_index_[*index] != '\0') {
     if (!is_reverse) {
       (*index)++;
     } else {
@@ -16,7 +16,7 @@ void Line::skip_punctuation_marks(int *index, bool is_reverse) const {
 
 int Line::length_of_line() const {
   int len = 0;
-  while (buffer_[start_index_ + len] != '\0') {
+  while (start_index_[len] != '\0') {
     len++;
   }
   return len;
@@ -25,7 +25,7 @@ int Line::length_of_line() const {
 bool Line::is_empty() const {
   int index = 0;
   skip_punctuation_marks(&index, false);
-  return buffer_[start_index_ + index] == '\0';
+  return start_index_[index] == '\0';
 }
 
 Book::Book(const char *filename) {
@@ -58,23 +58,6 @@ Book::~Book() {
   free(array_of_lines_);
 };
 
-void Book::sort() {
-  if (!array_of_lines_) {
-    book_indexing();
-  }
-
-  std::sort(array_of_lines_, array_of_lines_ + num_of_lines_, std::bind(&Book::comparator, this, _1, _2));
-}
-
-
-void Book::reverse_sort() {
-  if (!array_of_lines_) {
-    book_indexing();
-  }
-
-  std::sort(array_of_lines_, array_of_lines_ + num_of_lines_, std::bind(&Book::reverse_comparator, this, _1, _2));
-}
-
 
 void Book::output(const char *filename) const {
   FILE *answer;
@@ -88,7 +71,7 @@ void Book::output(const char *filename) const {
 
     int curr_line_length = array_of_lines_[i].length_of_line();
     if (!array_of_lines_[i].is_empty()) {
-      fwrite(buffer_ + array_of_lines_[i].start_index_, sizeof(char), static_cast<size_t>(curr_line_length), answer);
+      fwrite(array_of_lines_[i].start_index_, sizeof(char), static_cast<size_t>(curr_line_length), answer);
       fwrite("\n", sizeof(char), 1, answer);
     }
   }
@@ -113,51 +96,65 @@ void Book::book_indexing() {
   assert("Memory allocation error" and array_of_lines_ != nullptr);
 
   // не учитываем первый символ '\0'
-  array_of_lines_[index].start_index_ = 1;
-  array_of_lines_[index].buffer_ = buffer_;
+  array_of_lines_[index].start_index_ = buffer_+ 1;
 
   // не учитываем первый и последний символ '\0'
   for (int i = 1; i < book_size_ - 1; i++) {
     if (buffer_[i] == '\0') {
       index++;
-      array_of_lines_[index].start_index_ = i + 1;
-      array_of_lines_[index].buffer_ = buffer_;
+      array_of_lines_[index].start_index_ = buffer_ + i + 1;
     }
   }
 }
 
+void sort(Book& book) {
+  if (!book.array_of_lines_) {
+    book.book_indexing();
+  }
+
+  std::sort(book.array_of_lines_, book.array_of_lines_ + book.num_of_lines_, comparator);
+}
+
+
+void reverse_sort(Book& book) {
+  if (!book.array_of_lines_) {
+    book.book_indexing();
+  }
+
+  std::sort(book.array_of_lines_, book.array_of_lines_ + book.num_of_lines_, reverse_comparator);
+}
 
 // < true
-bool Book::comparator(const Line &line1, const Line &line2) {
+bool comparator(const Line &line1, const Line &line2) {
   int line1_index = 0;
   int line2_index = 0;
 
   line1.skip_punctuation_marks(&line1_index, false);
   line2.skip_punctuation_marks(&line2_index, false);
 
-  while (tolower(buffer_[line1.start_index_ + line1_index]) == tolower(buffer_[line2.start_index_ + line2_index])) {
+  while (tolower(line1.start_index_[line1_index]) == tolower(line2.start_index_[line2_index])) {
     line1_index++;
     line2_index++;
     line1.skip_punctuation_marks(&line1_index, false);
     line2.skip_punctuation_marks(&line2_index, false);
   }
-  return buffer_[line1.start_index_ + line1_index] < buffer_[line2.start_index_ + line2_index];
+  return line1.start_index_[line1_index] < line2.start_index_[line2_index];
 }
 
 
 // < true
-bool Book::reverse_comparator(const Line &line1, const Line &line2) {
+bool reverse_comparator(const Line &line1, const Line &line2) {
   int line1_index = line1.length_of_line();
   int line2_index = line2.length_of_line();
 
   line1.skip_punctuation_marks(&line1_index, true);
   line2.skip_punctuation_marks(&line2_index, true);
 
-  while (tolower(buffer_[line1.start_index_ + line1_index]) == tolower(buffer_[line2.start_index_ + line2_index])) {
+  while (tolower(line1.start_index_[line1_index]) == tolower(line2.start_index_[line2_index])) {
     line1_index--;
     line2_index--;
     line1.skip_punctuation_marks(&line1_index, true);
     line2.skip_punctuation_marks(&line2_index, true);
   }
-  return buffer_[line1.start_index_ + line1_index] < buffer_[line2.start_index_ + line2_index];
+  return line1.start_index_[line1_index] < line2.start_index_[line2_index];
 }
