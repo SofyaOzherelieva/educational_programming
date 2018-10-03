@@ -83,6 +83,9 @@ class Book {
     /*!
      * Заполняет array_of_lines_.
      */
+
+    bool book_indexed{false};
+
     void book_indexing();
 
   private:

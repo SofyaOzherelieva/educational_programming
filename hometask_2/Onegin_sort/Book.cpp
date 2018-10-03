@@ -39,6 +39,8 @@ Book::Book(const char *filename) {
   book_size_ = static_cast<size_t>(ftell(book_));
   rewind(book_);
 
+  assert("Book is empty" and book_size_ != 0);
+
   buffer_ = (char *) malloc(sizeof(char) * (book_size_ + 2));
 
   assert("Memory allocation error" and buffer_ != nullptr);
@@ -77,6 +79,7 @@ size_t Book::string_length() {
 }
 
 void Book::book_indexing() {
+  book_indexed = true;
   int index = 0;
   change_n_to_o();
 
@@ -107,14 +110,13 @@ void Book::change_n_to_o() {
 
 
 void output(Book &book, const char *filename) {
-  FILE *answer;
+  FILE *answer = fopen(filename, "wb");
 
-  answer = fopen(filename, "wb");
   if (!answer) {
     perror("fopen");
   };
 
-  if (!book[0]) {
+  if (!book.book_indexed) {
     book.book_indexing();
   }
 
@@ -131,7 +133,7 @@ void output(Book &book, const char *filename) {
 
 
 void sort(Book &book) {
-  if (!book[0]) {
+  if (!book.book_indexed) {
     book.book_indexing();
   }
 
@@ -140,7 +142,7 @@ void sort(Book &book) {
 
 
 void reverse_sort(Book &book) {
-  if (!book[0]) {
+  if (!book.book_indexed) {
     book.book_indexing();
   }
 
