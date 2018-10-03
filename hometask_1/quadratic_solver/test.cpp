@@ -12,7 +12,7 @@ void TestQuadraticSolver::better_assert(vector<double> &coefficients) {
 
   for (auto answer: quadraticSolver.answer_) {
     assert("The test failed" and
-           std::norm(answer * answer * coefficients[0] + answer * coefficients[1] + coefficients[2]) < EPSILON);
+           is_equal(std::norm(answer * answer * coefficients[0] + answer * coefficients[1] + coefficients[2]), 0));
   }
 }
 

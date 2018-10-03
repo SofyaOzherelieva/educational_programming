@@ -1,18 +1,23 @@
 #import "quadratic_solver.h"
 
+bool is_equal(double num1, double num2){
+  return std::fabs(num1 - num2) < EPSILON;
+}
+
+
 std::complex<double> QuadraticSolver::linear_solver() {
-  assert("The equation has an infinite number of solutions." and std::abs(coefficients_[0]) < EPSILON and
-         (std::abs(coefficients_[1]) > EPSILON or std::abs(coefficients_[2]) > EPSILON));
+  assert("The equation has an infinite number of solutions." and is_equal(coefficients_[0], 0) and
+         (!is_equal(coefficients_[1], 0) or !is_equal(coefficients_[2], 0)));
 
   assert(
-    "The equation has no solution." and std::abs(coefficients_[0]) < EPSILON and std::abs(coefficients_[1]) > EPSILON);
+    "The equation has no solution." and is_equal(coefficients_[0], 0) and !is_equal(coefficients_[1], 0));
 
   return -coefficients_[2] / coefficients_[1];
 }
 
 void QuadraticSolver::quadratic_solver() {
 
-  if (std::abs(coefficients_[0]) < EPSILON) {
+  if (is_equal(coefficients_[0], 0)) {
     answer_.push_back(linear_solver());
   } else {
     std::complex<double> discriminant = coefficients_[1] * coefficients_[1] - 4 * coefficients_[2] * coefficients_[0];

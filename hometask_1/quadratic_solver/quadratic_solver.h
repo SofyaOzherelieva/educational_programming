@@ -9,6 +9,9 @@ const double EPSILON = 0.001;
 
 using std::vector;
 
+/// Проверка на равенство двух чисел с плавающей точкой.
+bool is_equal(double num1, double num2);
+
 /*!
     \defgroup QuadraticSolver Решение квадратных уравнений
 	  \author Sofia
@@ -18,6 +21,7 @@ using std::vector;
 
     Уравнение решается при помощи вычисления дискриминанта.
 */
+
 
 ///@{
 class QuadraticSolver {
