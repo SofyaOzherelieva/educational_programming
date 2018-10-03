@@ -28,7 +28,7 @@ using namespace std::placeholders;
 struct Line {
 
   /// Начало строки
-  char* start_index_{nullptr};
+  char *start_index_{nullptr};
 
   /*!
    \brief Пропускает знаки препинания.
@@ -74,19 +74,11 @@ class Book {
 
     ~Book();
 
-    /*!
-     *
-     * @param filename дескриптор файла для записи
-     * @warning не выводит пустые строки
-     *
-     * Выводит текст с порядком строк, заданным сортировкой в указанный файл.
-     */
-    void output(const char *filename) const;
+    /// Обращение по строке
+    Line *operator[](int i);
 
-    /// Массив указателей на строки.
-    Line *array_of_lines_{nullptr};
-    /// Количество строк.
-    size_t num_of_lines_{0};
+    /// Кол-во строк в тексте
+    size_t string_length();
 
     /*!
      * Заполняет array_of_lines_.
@@ -107,15 +99,30 @@ class Book {
      * Меняет '\n' на '\0' в буфере. Для упрощенного вывода конкретной строки.
      */
     void change_n_to_o();
+
+    /// Массив указателей на строки.
+    Line *array_of_lines_{nullptr};
+
+    /// Количество строк.
+    size_t num_of_lines_{0};
 };
 ///@}
 
 
+/*!
+     *
+     * @param filename дескриптор файла для записи
+     * @warning не выводит пустые строки
+     *
+     * Выводит текст с порядком строк, заданным сортировкой в указанный файл.
+     */
+void output(Book &book, const char *filename);
+
 /// Сортирует строки без учета знаком препинания и регистра слева направо.
-void sort(Book& book);
+void sort(Book &book);
 
 /// Сравнивает строки без учета знаком препинания и регистра справа налево.
-void reverse_sort(Book& book);
+void reverse_sort(Book &book);
 
 /// Компаратор для сравнения строк без учета знаком препинания и регистра слева направо.
 bool comparator(const Line &line1, const Line &line2);

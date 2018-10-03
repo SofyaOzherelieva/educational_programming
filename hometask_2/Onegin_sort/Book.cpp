@@ -58,33 +58,22 @@ Book::~Book() {
   free(array_of_lines_);
 };
 
-
-void Book::output(const char *filename) const {
-  FILE *answer;
-
-  answer = fopen(filename, "wb");
-  if (!answer) {
-    perror("fopen");
-  };
-
-  for (int i = 0; i < num_of_lines_; i++) {
-
-    int curr_line_length = array_of_lines_[i].length_of_line();
-    if (!array_of_lines_[i].is_empty()) {
-      fwrite(array_of_lines_[i].start_index_, sizeof(char), static_cast<size_t>(curr_line_length), answer);
-      fwrite("\n", sizeof(char), 1, answer);
-    }
+Line *Book::operator[](int i) {
+  if (!array_of_lines_) {
+    book_indexing();
   }
-  fclose(answer);
+
+  assert("Выход за границы массива" and i < num_of_lines_);
+
+  return array_of_lines_ + i;
 }
 
-void Book::change_n_to_o() {
-  for (int i = 0; i < book_size_; i++) {
-    if (buffer_[i] == '\n') {
-      num_of_lines_++;
-      buffer_[i] = '\0';
-    }
+size_t Book::string_length() {
+  if (!array_of_lines_) {
+    book_indexing();
   }
+
+  return num_of_lines_;
 }
 
 void Book::book_indexing() {
@@ -96,7 +85,7 @@ void Book::book_indexing() {
   assert("Memory allocation error" and array_of_lines_ != nullptr);
 
   // не учитываем первый символ '\0'
-  array_of_lines_[index].start_index_ = buffer_+ 1;
+  array_of_lines_[index].start_index_ = buffer_ + 1;
 
   // не учитываем первый и последний символ '\0'
   for (int i = 1; i < book_size_ - 1; i++) {
@@ -107,21 +96,55 @@ void Book::book_indexing() {
   }
 }
 
-void sort(Book& book) {
-  if (!book.array_of_lines_) {
-    book.book_indexing();
+void Book::change_n_to_o() {
+  for (int i = 0; i < book_size_; i++) {
+    if (buffer_[i] == '\n') {
+      num_of_lines_++;
+      buffer_[i] = '\0';
+    }
   }
-
-  std::sort(book.array_of_lines_, book.array_of_lines_ + book.num_of_lines_, comparator);
 }
 
 
-void reverse_sort(Book& book) {
-  if (!book.array_of_lines_) {
+void output(Book &book, const char *filename) {
+  FILE *answer;
+
+  answer = fopen(filename, "wb");
+  if (!answer) {
+    perror("fopen");
+  };
+
+  if (!book[0]) {
     book.book_indexing();
   }
 
-  std::sort(book.array_of_lines_, book.array_of_lines_ + book.num_of_lines_, reverse_comparator);
+  for (int i = 0; i < book.string_length(); i++) {
+    book[i];
+    int curr_line_length = (*book[i]).length_of_line();
+    if (!(*book[i]).is_empty()) {
+      fwrite((*book[i]).start_index_, sizeof(char), static_cast<size_t>(curr_line_length), answer);
+      fwrite("\n", sizeof(char), 1, answer);
+    }
+  }
+  fclose(answer);
+}
+
+
+void sort(Book &book) {
+  if (!book[0]) {
+    book.book_indexing();
+  }
+
+  std::sort(book[0], book[0] + book.string_length(), comparator);
+}
+
+
+void reverse_sort(Book &book) {
+  if (!book[0]) {
+    book.book_indexing();
+  }
+
+  std::sort(book[0], book[0] + book.string_length(), reverse_comparator);
 }
 
 // < true

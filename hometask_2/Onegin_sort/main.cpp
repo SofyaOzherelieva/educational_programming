@@ -8,9 +8,9 @@ int main(int argv, char *argc[]) {
   Book book(filename);
 
   sort(book);
-  book.output("sort.txt");
+  output(book, "sort.txt");
 
   reverse_sort(book);
-  book.output("rev_sort.txt");
+  output(book, "rev_sort.txt");
   return 0;
 }
