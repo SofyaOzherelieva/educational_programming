@@ -27,7 +27,7 @@ class TestQuadraticSolver {
     /*! \brief Конструктор класса TestQuadraticSolver
         \param test_data массив тестов, которые представляют собой действительные коэффициенты квадратного уравнения
      */
-    explicit TestQuadraticSolver(vector<vector<double>> &test_data) : test_data_(test_data), test_num_(0) {};
+    explicit TestQuadraticSolver(vector<vector<double>>& test_data): test_data_(test_data) {};
 
     ~TestQuadraticSolver() = default;
 
@@ -40,9 +40,16 @@ class TestQuadraticSolver {
 
   private:
     int test_num_{0};
-    const vector<vector<double>>& test_data_;
+    const vector<vector<double>>& test_data_ = {{1,      2,      1},
+                                                {1,      2,      3},
+                                                {0,      3,      1},
+                                                {4,      3,      2},
+                                                {0.1,    0.2,    0.1},
+                                                {0.0001, 0.0001, 0.1},
+                                                {0,      0,      2},
+                                                {0,      0,      0}};
 
-    void better_assert(vector<double> &coefficients);
+    void better_assert(const vector<double> &coefficients);
 };
 ///@}
 

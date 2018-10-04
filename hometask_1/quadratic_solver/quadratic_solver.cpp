@@ -6,11 +6,11 @@ bool is_equal(double num1, double num2){
 
 
 std::complex<double> QuadraticSolver::linear_solver() {
-  assert("The equation has an infinite number of solutions." and is_equal(coefficients_[0], 0) and
-         (!is_equal(coefficients_[1], 0) or !is_equal(coefficients_[2], 0)));
+  assert("The equation has an infinite number of solutions." && is_equal(coefficients_[0], 0) &&
+         (!is_equal(coefficients_[1], 0) || !is_equal(coefficients_[2], 0)));
 
   assert(
-    "The equation has no solution." and is_equal(coefficients_[0], 0) and !is_equal(coefficients_[1], 0));
+    "The equation has no solution." && is_equal(coefficients_[0], 0) && !is_equal(coefficients_[1], 0));
 
   return -coefficients_[2] / coefficients_[1];
 }

@@ -31,7 +31,7 @@ class QuadraticSolver {
         \param coefficients коэффициенты квадратного уравнения
      */
 
-    explicit QuadraticSolver(vector<double> &coefficients) : coefficients_(coefficients) {};
+    explicit QuadraticSolver(const vector<double> &coefficients) : coefficients_(coefficients) {};
 
     ~QuadraticSolver() = default;
 

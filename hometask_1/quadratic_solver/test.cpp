@@ -2,7 +2,9 @@
 #import "quadratic_solver.h"
 
 
-void TestQuadraticSolver::better_assert(vector<double> &coefficients) {
+
+
+void TestQuadraticSolver::better_assert(const vector<double> &coefficients) {
 
   test_num_++;
 
@@ -11,8 +13,8 @@ void TestQuadraticSolver::better_assert(vector<double> &coefficients) {
   quadraticSolver.quadratic_solver();
 
   for (auto answer: quadraticSolver.answer_) {
-    assert("The test failed" and
-           is_equal(std::norm(answer * answer * coefficients[0] + answer * coefficients[1] + coefficients[2]), 0));
+    assert("The test failed" &&
+           (!is_equal(answer.real(), 0) or !is_equal(answer.imag(), 0)));
   }
 }
 
