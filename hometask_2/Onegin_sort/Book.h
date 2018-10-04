@@ -50,7 +50,7 @@ struct Line {
   /*!
    * @return является ли строка пустой
    *
-   * Пустая строка - не содержит букв.
+   * Пустая строка - не содержит символов.
    */
   bool is_empty() const;
 };
@@ -78,7 +78,7 @@ class Book {
     Line *operator[](int i);
 
     /// Кол-во строк в тексте
-    size_t string_length();
+    size_t lines_count();
 
     /*!
      * Заполняет array_of_lines_.
@@ -86,7 +86,16 @@ class Book {
 
     bool book_indexed{false};
 
-    void book_indexing();
+    void book_index();
+
+    /*!
+     *
+     * @param filename дескриптор файла для записи
+     * @warning не выводит пустые строки
+     *
+     * Выводит текст с порядком строк, заданным сортировкой в указанный файл.
+     */
+    void output(const char *filename);
 
   private:
     /// Дескриптор файла, в котором лежит книга.
@@ -101,7 +110,7 @@ class Book {
     /*!
      * Меняет '\n' на '\0' в буфере. Для упрощенного вывода конкретной строки.
      */
-    void change_n_to_o();
+    void newline_to_eol();
 
     /// Массив указателей на строки.
     Line *array_of_lines_{nullptr};
@@ -111,15 +120,6 @@ class Book {
 };
 ///@}
 
-
-/*!
-     *
-     * @param filename дескриптор файла для записи
-     * @warning не выводит пустые строки
-     *
-     * Выводит текст с порядком строк, заданным сортировкой в указанный файл.
-     */
-void output(Book &book, const char *filename);
 
 /// Сортирует строки без учета знаком препинания и регистра слева направо.
 void sort(Book &book);

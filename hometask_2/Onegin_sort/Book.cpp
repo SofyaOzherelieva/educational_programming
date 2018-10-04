@@ -39,11 +39,11 @@ Book::Book(const char *filename) {
   book_size_ = static_cast<size_t>(ftell(book_));
   rewind(book_);
 
-  assert("Book is empty" and book_size_ != 0);
+  assert("Book is empty" && book_size_ != 0);
 
   buffer_ = (char *) malloc(sizeof(char) * (book_size_ + 2));
 
-  assert("Memory allocation error" and buffer_ != nullptr);
+  assert("Memory allocation error" && buffer_ != nullptr);
 
   // добавили '\0' в начало, чтобы не прописывать случаи в сравнении с конца
   buffer_[0] = '\0';
@@ -62,30 +62,30 @@ Book::~Book() {
 
 Line *Book::operator[](int i) {
   if (!array_of_lines_) {
-    book_indexing();
+    book_index();
   }
 
-  assert("Выход за границы массива" and i < num_of_lines_);
+  assert("Выход за границы массива" && i < num_of_lines_);
 
   return array_of_lines_ + i;
 }
 
-size_t Book::string_length() {
+size_t Book::lines_count() {
   if (!array_of_lines_) {
-    book_indexing();
+    book_index();
   }
 
   return num_of_lines_;
 }
 
-void Book::book_indexing() {
+void Book::book_index() {
   book_indexed = true;
   int index = 0;
-  change_n_to_o();
+  newline_to_eol();
 
   array_of_lines_ = (Line *) malloc(sizeof(Line) * num_of_lines_);
 
-  assert("Memory allocation error" and array_of_lines_ != nullptr);
+  assert("Memory allocation error" && array_of_lines_ != nullptr);
 
   // не учитываем первый символ '\0'
   array_of_lines_[index].start_index_ = buffer_ + 1;
@@ -99,7 +99,28 @@ void Book::book_indexing() {
   }
 }
 
-void Book::change_n_to_o() {
+void Book::output(const char *filename) {
+  FILE *answer = fopen(filename, "wb");
+
+  if (!answer) {
+    perror("fopen");
+  };
+
+  if (!book_indexed) {
+    book_index();
+  }
+
+  for (int i = 0; i < num_of_lines_; i++) {
+    int curr_line_length = (array_of_lines_[i]).length_of_line();
+    if (!array_of_lines_[i].is_empty()) {
+      fwrite(array_of_lines_[i].start_index_, sizeof(char), static_cast<size_t>(curr_line_length), answer);
+      fwrite("\n", sizeof(char), 1, answer);
+    }
+  }
+  fclose(answer);
+}
+
+void Book::newline_to_eol() {
   for (int i = 0; i < book_size_; i++) {
     if (buffer_[i] == '\n') {
       num_of_lines_++;
@@ -109,44 +130,21 @@ void Book::change_n_to_o() {
 }
 
 
-void output(Book &book, const char *filename) {
-  FILE *answer = fopen(filename, "wb");
-
-  if (!answer) {
-    perror("fopen");
-  };
-
-  if (!book.book_indexed) {
-    book.book_indexing();
-  }
-
-  for (int i = 0; i < book.string_length(); i++) {
-    book[i];
-    int curr_line_length = (*book[i]).length_of_line();
-    if (!(*book[i]).is_empty()) {
-      fwrite((*book[i]).start_index_, sizeof(char), static_cast<size_t>(curr_line_length), answer);
-      fwrite("\n", sizeof(char), 1, answer);
-    }
-  }
-  fclose(answer);
-}
-
-
 void sort(Book &book) {
   if (!book.book_indexed) {
-    book.book_indexing();
+    book.book_index();
   }
 
-  std::sort(book[0], book[0] + book.string_length(), comparator);
+  std::sort(book[0], book[0] + book.lines_count(), comparator);
 }
 
 
 void reverse_sort(Book &book) {
   if (!book.book_indexed) {
-    book.book_indexing();
+    book.book_index();
   }
 
-  std::sort(book[0], book[0] + book.string_length(), reverse_comparator);
+  std::sort(book[0], book[0] + book.lines_count(), reverse_comparator);
 }
 
 // < true
