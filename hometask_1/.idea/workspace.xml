@@ -11,10 +11,6 @@
   <component name="ChangeListManager">
     <list default="true" id="808dd32b-f4fc-4d3d-aab1-4f9c8202fd44" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/quadratic_solver/main.cpp" afterPath="$PROJECT_DIR$/quadratic_solver/main.cpp" />
-      <change beforePath="$PROJECT_DIR$/quadratic_solver/quadratic_solver.cpp" afterPath="$PROJECT_DIR$/quadratic_solver/quadratic_solver.cpp" />
-      <change beforePath="$PROJECT_DIR$/quadratic_solver/quadratic_solver.h" afterPath="$PROJECT_DIR$/quadratic_solver/quadratic_solver.h" />
-      <change beforePath="$PROJECT_DIR$/quadratic_solver/test.cpp" afterPath="$PROJECT_DIR$/quadratic_solver/test.cpp" />
-      <change beforePath="$PROJECT_DIR$/quadratic_solver/test.h" afterPath="$PROJECT_DIR$/quadratic_solver/test.h" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -29,8 +25,8 @@
       <file leaf-file-name="main.cpp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/quadratic_solver/main.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-967">
-              <caret line="27" column="1" lean-forward="false" selection-start-line="27" selection-start-column="1" selection-end-line="27" selection-end-column="1" />
+            <state relative-caret-position="257">
+              <caret line="101" column="29" lean-forward="false" selection-start-line="101" selection-start-column="29" selection-end-line="101" selection-end-column="29" />
               <folding />
             </state>
           </provider>
@@ -84,11 +80,11 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/quadratic_solver/main.cpp" />
         <option value="$PROJECT_DIR$/quadratic_solver/quadratic_solver.h" />
         <option value="$PROJECT_DIR$/quadratic_solver/quadratic_solver.cpp" />
         <option value="$PROJECT_DIR$/quadratic_solver/test.h" />
         <option value="$PROJECT_DIR$/quadratic_solver/test.cpp" />
+        <option value="$PROJECT_DIR$/quadratic_solver/main.cpp" />
       </list>
     </option>
   </component>
@@ -170,12 +166,12 @@
       <updated>1538603851912</updated>
       <workItem from="1538603853178" duration="856000" />
       <workItem from="1538604815185" duration="246000" />
-      <workItem from="1538650432084" duration="36000" />
+      <workItem from="1538650432084" duration="263000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1138000" />
+    <option name="totallyTimeSpent" value="1365000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="-4" width="1366" height="772" extended-state="6" />
@@ -325,8 +321,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/quadratic_solver/main.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-967">
-          <caret line="27" column="1" lean-forward="false" selection-start-line="27" selection-start-column="1" selection-end-line="27" selection-end-column="1" />
+        <state relative-caret-position="257">
+          <caret line="101" column="29" lean-forward="false" selection-start-line="101" selection-start-column="29" selection-end-line="101" selection-end-column="29" />
           <folding />
         </state>
       </provider>

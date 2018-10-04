@@ -98,6 +98,9 @@ int main() {
 
   for (int i = 0; i < 3; i++) {
     std::cin >> coefficients[i];
+    if (!std::cin) {
+      assert("Incorrect input" && 0);
+    }
     assert(std::isfinite(coefficients[i]));
   }
 
