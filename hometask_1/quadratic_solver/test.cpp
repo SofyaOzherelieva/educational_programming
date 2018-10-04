@@ -2,8 +2,6 @@
 #import "quadratic_solver.h"
 
 
-
-
 void TestQuadraticSolver::better_assert(const vector<double> &coefficients) {
 
   test_num_++;

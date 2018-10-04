@@ -1,6 +1,6 @@
 #import "quadratic_solver.h"
 
-bool is_equal(double num1, double num2){
+bool is_equal(double num1, double num2) {
   return std::fabs(num1 - num2) < EPSILON;
 }
 

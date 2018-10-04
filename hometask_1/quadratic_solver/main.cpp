@@ -15,7 +15,7 @@ enum {
  * @return число корней; -1 - корней бесконечно много
  */
 
-int simple_linear_solver(const vector<double>& coefficients, vector<double>* roots) {
+int simple_linear_solver(const vector<double> &coefficients, vector<double> *roots) {
 
   if (is_equal(coefficients[1], 0)) {
 
@@ -40,7 +40,7 @@ int simple_linear_solver(const vector<double>& coefficients, vector<double>* roo
  * @return число корней; -1 - корней бесконечно много
  */
 
-int simple_quadratic_solver(const vector<double>& coefficients, vector<double>* roots) {
+int simple_quadratic_solver(const vector<double> &coefficients, vector<double> *roots) {
   assert("Number of coefficients is not 3" && coefficients.size() == 3);
 
   if (is_equal(coefficients[0], 0)) {
@@ -62,7 +62,7 @@ int simple_quadratic_solver(const vector<double>& coefficients, vector<double>* 
   }
 }
 
-void output(int number_of_roots, const vector<double>& roots){
+void output(int number_of_roots, const vector<double> &roots) {
   assert("Number of roots is bigger than size of root vector." && number_of_roots <= roots.size());
 
   if (number_of_roots == INF_ROOTS) {
@@ -81,14 +81,14 @@ void output(int number_of_roots, const vector<double>& roots){
 
 int main() {
 
-  vector<vector<double>> test = {{1,      2,      1},
-                {1,      2,      3},
-                {0,      3,      1},
-                {4,      3,      2},
-                {0.1,    0.2,    0.1},
-                {0.0001, 0.0001, 0.1},
-                {0,      0,      2},
-                {0,      0,      0}};
+  vector <vector<double>> test = {{1,      2,      1},
+                                  {1,      2,      3},
+                                  {0,      3,      1},
+                                  {4,      3,      2},
+                                  {0.1,    0.2,    0.1},
+                                  {0.0001, 0.0001, 0.1},
+                                  {0,      0,      2},
+                                  {0,      0,      0}};
   //TestQuadraticSolver testQuadraticSolver(test);
   //testQuadraticSolver.test_quadratic_solver();
 
