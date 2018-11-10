@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/hometask_3.dir/main.cpp.o  -o hometask_3 
