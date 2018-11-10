@@ -256,11 +256,11 @@ class Stack {
     }
 
     size_t CalculateBufferChecksum(){
-      size_t temp_check_sum = 0;
+      size_t temp_checksum = 0;
       for(int i = 0; i < amount_of_elements_; i++){
-        AddToChecksum((*buffer_)[i], &temp_check_sum);
+        AddToChecksum((*buffer_)[i], &temp_checksum);
       }
-      return temp_check_sum;
+      return temp_checksum;
     }
 
     size_t CalculateStackChecksum(){
@@ -270,8 +270,8 @@ class Stack {
       return result;
     }
 
-    void AddToChecksum(const T& element, size_t* temp_check_sum){
-      *temp_check_sum ^= hash_func(element);
+    void AddToChecksum(const T& element, size_t* temp_checksum){
+      *temp_checksum ^= hash_func(element);
     }
 
     size_t buffer_checksum_ = NULL;
