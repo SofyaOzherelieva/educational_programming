@@ -123,19 +123,6 @@ hometask_3/fast:
 	$(MAKE) -f CMakeFiles/hometask_3.dir/build.make CMakeFiles/hometask_3.dir/build
 .PHONY : hometask_3/fast
 
-#=============================================================================
-# Target rules for targets named runUnitTests
-
-# Build rule for target.
-runUnitTests: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 runUnitTests
-.PHONY : runUnitTests
-
-# fast build rule for target.
-runUnitTests/fast:
-	$(MAKE) -f GTest/CMakeFiles/runUnitTests.dir/build.make GTest/CMakeFiles/runUnitTests.dir/build
-.PHONY : runUnitTests/fast
-
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -172,7 +159,6 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... hometask_3"
-	@echo "... runUnitTests"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

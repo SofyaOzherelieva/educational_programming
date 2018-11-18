@@ -27,7 +27,6 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/home/sofya/Apps/clion-2017.3.3/bin/cmake/share/cmake-3.9/Modules/Platform/UnixPaths.cmake"
   "/home/sofya/Apps/clion-2017.3.3/bin/cmake/share/cmake-3.9/Modules/ProcessorCount.cmake"
   "../CMakeLists.txt"
-  "../GTest/CMakeLists.txt"
   "CMakeFiles/3.9.6/CMakeCCompiler.cmake"
   "CMakeFiles/3.9.6/CMakeCXXCompiler.cmake"
   "CMakeFiles/3.9.6/CMakeSystem.cmake"
@@ -42,11 +41,9 @@ set(CMAKE_MAKEFILE_OUTPUTS
 # Byproducts of CMake generate step:
 set(CMAKE_MAKEFILE_PRODUCTS
   "CMakeFiles/CMakeDirectoryInformation.cmake"
-  "GTest/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/hometask_3.dir/DependInfo.cmake"
-  "GTest/CMakeFiles/runUnitTests.dir/DependInfo.cmake"
   )

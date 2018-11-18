@@ -1,0 +1,29 @@
+Stack.h
+
+1.
+
+//static constexpr std::string_view OK    = "OK";
+//static constexpr std::string_view TAINTED_FRONT_CANARY    = "TAINTED_FRONT_CANARY";
+//static constexpr std::string_view TAINTED_BACK_CANARY    = "TAINTED_BACK_CANARY";
+//static constexpr std::string_view MISMATCH_BUFFER_CHECKSUM    = "MISMATCH_BUFFER_CHECKSUM";
+//static constexpr std::string_view MISMATCH_STACK_CHECKSUM    = "MISMATCH_STACK_CHECKSUM";
+
+// не использую string_view, т.к. он не умеет распознавать ErrorTypes error_type
+
+2.
+
+значение канарейки не в define т.к. тогда он будет виден по всей программе
+
+3.
+
+не вызываю в CalculateBufferChecksum функцию AddToChecksum,
+чтобы сделать эту функцию const, то есть дать понять,
+что функция не меняет буффер
+
+4.
+
+В дальнейшем обратить внимание на замечания:
+
+Удалены copy ctor и copy =, также следует переопределять все для move-семантики
+
+Вместо ручного обращения с памятью лучше рассмотреть варианты использования умных указателей(unique_ptr в данном случае)

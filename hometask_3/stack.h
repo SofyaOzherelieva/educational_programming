@@ -1,282 +1,251 @@
-#include <algorithm>
-#include <cstdio>
-#include <cstring>
-#include <iostream>
+#pragma once
 
-using std::cout;
+#include "buffer.h"
 
-const bool debug = true;
-#define BUFFER_CANARY 0xBAADF00D
-
-enum TypeOfReallocation {
-  EXTENSION = 0,
-  CONTRACTION = 1
-};
-
-enum ErrorTypes{
-  OK = 0,
-  FRONT_CANARY_ERROR = 1,
-  BACK_CANARY_ERROR = 2,
-  BUFFER_CHECKSUM_ERROR = 3,
-  STACK_CHECKSUM_ERROR = 4
-};
-
-const char* ErrorNames[] =
-  {
-    "OK",
-    "FRONT_CANARY_ERROR",
-    "BACK_CANARY_ERROR",
-    "BUFFER_CHECKSUM_ERROR",
-    "STACK_CHECKSUM_ERROR"
-  };
+static const bool debug = true;
 
 template<typename T>
-struct CBuffer {
-    explicit CBuffer(size_t buffer_size) : buffer_size_(buffer_size) {
-      buffer_ = new T[buffer_size];
-    }
-
-    ~CBuffer() {
-      delete[] buffer_;
-    }
-
-    CBuffer(const CBuffer&) = delete;
-    CBuffer & operator=(const CBuffer&) = delete;
-
-    T &operator[](int i) {
-      if (i > buffer_size_) {
-        std::cout << "ERROR: INDEX OUT OF RANGE";
-      }
-      return buffer_[i];
-    }
-
-    void Reallocate(TypeOfReallocation type, size_t realloc_coeff, size_t size) {
-      size_t new_size = NULL;
-      switch (type) {
-        case EXTENSION:
-          new_size = buffer_size_ * realloc_coeff;
-          break;
-        case CONTRACTION:
-          new_size = buffer_size_ / realloc_coeff;
-          size = new_size;
-          break;
-      }
-
-      auto new_buffer = new T[new_size];
-
-      for(int i = 0; i < size; i++){
-        new_buffer[i] = buffer_[i];
-      }
-      delete[] buffer_;
-      buffer_ = new_buffer;
-      buffer_size_ = new_size;
-
-    }
-
-    size_t GetBufferSize(){
-      return buffer_size_;
-    }
-
-    uint32_t GetFrontCanary(){
-      return front_canary;
-    }
-
-    uint32_t GetBackCanary(){
-      return back_canary;
-    }
-
-    bool CheckFrontCanary(){
-      return GetFrontCanary() == BUFFER_CANARY;
-    }
-
-    bool CheckBackCanary(){
-      return GetBackCanary() == BUFFER_CANARY;
-    }
-
+class CStack {
   private:
-    uint32_t front_canary = BUFFER_CANARY;
 
-    T *buffer_ = nullptr;
-    size_t buffer_size_ = NULL;
+    static constexpr size_t INITIAL_BUFFER_SIZE     = 1;
+    static constexpr size_t REALLOCATE_COEFFICIENT  = 2;
+    static constexpr size_t CONTRACTION_COEFFICIENT = 4;
 
-    uint32_t back_canary = BUFFER_CANARY;
-};
+    enum class ErrorTypes {
+        OK                       = 0,
+        TAINTED_FRONT_CANARY     = 1,
+        TAINTED_BACK_CANARY      = 2,
+        MISMATCH_BUFFER_CHECKSUM = 3,
+        MISMATCH_STACK_CHECKSUM  = 4
+    };
 
-template<typename T>
-class Stack {
+    const char *ErrorNames[5] =
+                 {
+                   "OK",
+                   "TAINTED_FRONT_CANARY",
+                   "TAINTED_BACK_CANARY",
+                   "MISMATCH_BUFFER_CHECKSUM",
+                   "MISMATCH_STACK_CHECKSUM"
+                 };
+
   public:
-    const size_t INITIAL_BUFFER_SIZE = 1;
-    const size_t REALLOCATE_COEFFICIENT = 2;
-    const size_t CONTRACTION_COEFFICIENT = 4;
 
-  public:
-    Stack() : amount_of_elements_(0), buffer_checksum_(0) {
-      buffer_ = new CBuffer<T>(INITIAL_BUFFER_SIZE);
+    CStack() : amount_of_elements_(0),
+               buffer_checksum_(0),
+               buffer_(new CBuffer<T>(INITIAL_BUFFER_SIZE)) {
+
       stack_checksum_ = CalculateStackChecksum();
     };
 
-    ~Stack() {
-      buffer_->~CBuffer();
+    ~CStack() noexcept {
+      delete buffer_;
     };
 
-    Stack(const Stack&) = delete;
-    Stack & operator=(const Stack&) = delete;
+    bool Pop();
 
-    bool Pop() {
-      IsError();
-      if (IsEmpty()) {
-        return false;
-      }
+    void Push(const T &element);
 
-      amount_of_elements_--;
-      AddToChecksum((*buffer_)[amount_of_elements_], &buffer_checksum_);
+    inline bool IsEmpty() const noexcept;
 
-      if (!IsFilled()) {
-        Reallocate(CONTRACTION);
-      }
-      IsError();
-      return true;
-    }
+    inline bool IsFull() const noexcept;
 
-    void Push(const T &element) {
-      IsError();
-      if (IsFull()) {
-        Reallocate(EXTENSION);
-      }
-      (*buffer_)[amount_of_elements_] = element;
-      amount_of_elements_++;
-      AddToChecksum(element, &buffer_checksum_);
-      IsError();
-    }
-
-    bool IsEmpty() {
-      return amount_of_elements_ == 0;
-    }
-
-    bool IsFull() {
-      return buffer_->GetBufferSize() <= amount_of_elements_;
-    }
-
-    bool IsFilled() {
-      return amount_of_elements_ >= buffer_->GetBufferSize() / CONTRACTION_COEFFICIENT;
-    }
+    inline bool IsFilled() const noexcept;
 
   private:
 
-    void Dump(ErrorTypes error_type){
-      if(error_type != OK){
-        std::cout << ErrorNames[error_type] << '\n';
+    void Dump(ErrorTypes error_type) const;
 
-        std::cout << "--------------------------------------------------------\n";
+    void IsError() const;
 
-        std::cout << "Stack: " << this;
-        std::cout << "Buffer: " << buffer_;
+    ErrorTypes IsStackChecksumOk() const noexcept;
 
-        std::cout << "Buffer size: " << buffer_->GetBufferSize() << '\n';
-        std::cout << "Number of elements in buffer: " << amount_of_elements_<< '\n';
+    ErrorTypes IsBufferChecksumOk() const noexcept;
 
-        auto temp_front_canary = buffer_->GetFrontCanary();
+    ErrorTypes IsFrontCanaryOk() const noexcept;
 
-        std::cout << "Front buffer canary: " << temp_front_canary
-                  << " Expected: " << BUFFER_CANARY
-                  << " Is equal? - " << (temp_front_canary == BUFFER_CANARY) << '\n';
+    ErrorTypes IsBackCanaryOk() const noexcept;
 
-        auto temp_stack_checksum = CalculateStackChecksum();
+    void Reallocate(TypeOfReallocation type);
 
-        std::cout << "Stack checksum: " << stack_checksum_
-                  << " Expected: " << stack_checksum_
-                  << " Is equal? - " << (temp_stack_checksum == stack_checksum_) << '\n';
+    size_t CalculateBufferChecksum() const noexcept;
 
-        auto temp_buffer_checksum = CalculateBufferChecksum();
+    size_t CalculateStackChecksum() const noexcept;
 
-        std::cout << "Buffer checksum: " << temp_buffer_checksum
-                  << " Expected: " << buffer_checksum_
-                  << " Is equal? - " << (temp_buffer_checksum == buffer_checksum_) << '\n';
+    void AddToChecksum(const T &element, size_t *temp_checksum) noexcept;
 
-        std::cout << "Buffer elements: ";
-        for (int i = 0; i < amount_of_elements_; i++) {
-          std::cout << (*buffer_)[i] << ' ';
-        }
-        std::cout << '\n';
-
-        auto temp_back_canary = buffer_->GetBackCanary();
-
-        std::cout << "Front buffer canary: " << temp_back_canary
-                  << " Expected: " << BUFFER_CANARY
-                  << " Is equal? - " << (temp_back_canary == BUFFER_CANARY) << '\n';
-
-        std::cout << "--------------------------------------------------------\n";
-        exit(error_type);
-      }
-    }
-
-    void IsError(){
-      if(debug) {
-        Dump(IsStackChecksumOk());
-        Dump(IsBufferChecksumOk());
-        Dump(IsFrontCanaryOk());
-        Dump(IsBackCanaryOk());
-      }
-    }
-
-    ErrorTypes IsStackChecksumOk(){
-      if(stack_checksum_ == CalculateStackChecksum()){
-        return OK;
-      }else{
-        return STACK_CHECKSUM_ERROR;
-      }
-    }
-
-    ErrorTypes IsBufferChecksumOk(){
-      if(buffer_checksum_ == CalculateBufferChecksum()){
-        return OK;
-      }else{
-        return BUFFER_CHECKSUM_ERROR;
-      }
-    }
-
-    ErrorTypes IsFrontCanaryOk(){
-      if(buffer_->CheckFrontCanary()){
-        return OK;
-      }else{
-        return BACK_CANARY_ERROR;
-      }
-    }
-
-    ErrorTypes IsBackCanaryOk(){
-      if(buffer_->CheckBackCanary()){
-        return OK;
-      }else{
-        return FRONT_CANARY_ERROR;
-      }
-    }
-
-    void Reallocate(TypeOfReallocation type) {
-      (*buffer_).Reallocate(type, REALLOCATE_COEFFICIENT, amount_of_elements_);
-    }
-
-    size_t CalculateBufferChecksum(){
-      size_t temp_checksum = 0;
-      for(int i = 0; i < amount_of_elements_; i++){
-        AddToChecksum((*buffer_)[i], &temp_checksum);
-      }
-      return temp_checksum;
-    }
-
-    size_t CalculateStackChecksum(){
-      size_t result = 0;
-      result ^= reinterpret_cast<intptr_t>(buffer_);
-      result ^= reinterpret_cast<intptr_t>(this);
-      return result;
-    }
-
-    void AddToChecksum(const T& element, size_t* temp_checksum){
-      *temp_checksum ^= hash_func(element);
-    }
-
-    size_t buffer_checksum_ = NULL;
-    size_t stack_checksum_ = NULL;
-    CBuffer<T> *buffer_ = nullptr;
-    size_t amount_of_elements_ = NULL; // кол-во элементов в буффере
+    size_t       buffer_checksum_;
+    size_t       stack_checksum_;
+    CBuffer<T>   *buffer_;
+    size_t       amount_of_elements_;
     std::hash<T> hash_func;
 };
+
+
+//////////////////////////////////////////////////////////////////////////////////////////
+
+
+template<typename T>
+bool CStack<T>::Pop() {
+  IsError();
+  if (IsEmpty()) {
+    return false;
+  }
+
+  amount_of_elements_--;
+  AddToChecksum((*buffer_)[amount_of_elements_], &buffer_checksum_);
+
+  if (!IsFilled()) {
+    Reallocate(TypeOfReallocation::CONTRACTION);
+  }
+  IsError();
+  return true;
+}
+
+template<typename T>
+void CStack<T>::Push(const T &element) {
+  IsError();
+  if (IsFull()) {
+    Reallocate(TypeOfReallocation::EXTENSION);
+  }
+  (*buffer_)[amount_of_elements_] = element;
+  amount_of_elements_++;
+  AddToChecksum(element, &buffer_checksum_);
+  IsError();
+}
+
+template<typename T>
+inline bool CStack<T>::IsEmpty() const noexcept {
+  return amount_of_elements_ == 0;
+}
+
+template<typename T>
+inline bool CStack<T>::IsFull() const noexcept {
+  return buffer_->GetBufferSize() <= amount_of_elements_;
+}
+
+template<typename T>
+inline bool CStack<T>::IsFilled() const noexcept {
+  return amount_of_elements_ >= buffer_->GetBufferSize() / CONTRACTION_COEFFICIENT;
+}
+
+template<typename T>
+void CStack<T>::Dump(ErrorTypes error_type) const {
+  if (error_type != ErrorTypes::OK) {
+    std::cout << ErrorNames[static_cast<int>(error_type)] << '\n';
+
+    std::cout << "--------------------------------------------------------\n";
+
+    std::cout << "CStack: " << this;
+    std::cout << "Buffer: " << buffer_;
+
+    std::cout << "Buffer size: " << buffer_->GetBufferSize() << '\n';
+    std::cout << "Number of elements in buffer: " << amount_of_elements_ << '\n';
+
+    auto temp_front_canary = buffer_->GetFrontCanary();
+
+    std::cout << "Front buffer canary: " << temp_front_canary
+              << " Expected: " << 0xBAADF00D
+              << " Is equal? - " << (temp_front_canary == 0xBAADF00D) << '\n';
+
+    auto temp_stack_checksum = CalculateStackChecksum();
+
+    std::cout << "CStack checksum: " << stack_checksum_
+              << " Expected: " << stack_checksum_
+              << " Is equal? - " << (temp_stack_checksum == stack_checksum_) << '\n';
+
+    auto temp_buffer_checksum = CalculateBufferChecksum();
+
+    std::cout << "Buffer checksum: " << temp_buffer_checksum
+              << " Expected: " << buffer_checksum_
+              << " Is equal? - " << (temp_buffer_checksum == buffer_checksum_) << '\n';
+
+    std::cout << "Buffer elements: ";
+    for (int i = 0; i < amount_of_elements_; i++) {
+      std::cout << (*buffer_)[i] << ' ';
+    }
+    std::cout << '\n';
+
+    auto temp_back_canary = buffer_->GetBackCanary();
+
+    std::cout << "Front buffer canary: " << temp_back_canary
+              << " Expected: " << 0xBAADF00D
+              << " Is equal? - " << (temp_back_canary == 0xBAADF00D) << '\n';
+
+    std::cout << "--------------------------------------------------------\n";
+    exit(static_cast<int>(error_type));
+  }
+}
+
+template<typename T>
+void CStack<T>::IsError() const {
+  if (debug) {
+    Dump(IsStackChecksumOk());
+    Dump(IsBufferChecksumOk());
+    Dump(IsFrontCanaryOk());
+    Dump(IsBackCanaryOk());
+  }
+}
+
+template<typename T>
+typename CStack<T>::ErrorTypes CStack<T>::IsStackChecksumOk() const noexcept {
+  if (stack_checksum_ == CalculateStackChecksum()) {
+    return ErrorTypes::OK;
+  } else {
+    return ErrorTypes::MISMATCH_STACK_CHECKSUM;
+  }
+}
+
+template<typename T>
+typename CStack<T>::ErrorTypes CStack<T>::IsBufferChecksumOk() const noexcept {
+  if (buffer_checksum_ == CalculateBufferChecksum()) {
+    return ErrorTypes::OK;
+  } else {
+    return ErrorTypes::MISMATCH_BUFFER_CHECKSUM;
+  }
+}
+
+template<typename T>
+typename CStack<T>::ErrorTypes CStack<T>::IsFrontCanaryOk() const noexcept {
+  if (buffer_->CheckFrontCanary()) {
+    return ErrorTypes::OK;
+  } else {
+    return ErrorTypes::TAINTED_BACK_CANARY;
+  }
+}
+
+template<typename T>
+typename CStack<T>::ErrorTypes CStack<T>::IsBackCanaryOk() const noexcept {
+  if (buffer_->CheckBackCanary()) {
+    return ErrorTypes::OK;
+  } else {
+    return ErrorTypes::TAINTED_FRONT_CANARY;
+  }
+}
+
+template<typename T>
+void CStack<T>::Reallocate(TypeOfReallocation type) {
+  (*buffer_).Reallocate(type, REALLOCATE_COEFFICIENT, amount_of_elements_);
+}
+
+template<typename T>
+size_t CStack<T>::CalculateBufferChecksum() const noexcept {
+  size_t   temp_checksum = 0;
+  for (int i             = 0; i < amount_of_elements_; i++) {
+    temp_checksum ^= hash_func((*buffer_)[i]);
+  }
+  return temp_checksum;
+}
+
+template<typename T>
+size_t CStack<T>::CalculateStackChecksum() const noexcept {
+  size_t result = 0;
+  result ^= reinterpret_cast<intptr_t>(buffer_);
+  result ^= reinterpret_cast<intptr_t>(this);
+  return result;
+}
+
+template<typename T>
+void CStack<T>::AddToChecksum(const T &element, size_t *temp_checksum) noexcept {
+  *temp_checksum ^= hash_func(element);
+}
