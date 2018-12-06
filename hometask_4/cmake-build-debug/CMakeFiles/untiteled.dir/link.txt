@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/untiteled.dir/home/sofya/Homework/Ded_hometasks/Onegin_sort/Book.cpp.o  -o untiteled 
