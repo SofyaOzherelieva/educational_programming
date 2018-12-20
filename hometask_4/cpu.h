@@ -6,7 +6,7 @@
 namespace Cpu {
 void compile(const char *in_file, const char *out_file = "myBinFile") {
   CCommand    command;
-  std::string program;
+  std::string program = "";
   Book        program_text(in_file);
 
   if (!program_text.book_indexed) {
@@ -72,8 +72,9 @@ void decompile(std::ostream &out, const char *input_filename = "myBinFile") {
 
 void run(const char *input_filename = "myBinFile") {
 
-  std::vector<double> registers(4);
+  std::vector<double> registers(4, NAN);
   CStack<double>      stack;
+  CStack<double> return_pos;
 
   char *program = Parser::read_bin_file().first;
 

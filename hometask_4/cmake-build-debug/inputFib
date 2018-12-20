@@ -28,3 +28,42 @@ DBL
 PUSH 1
 SUB
 <-JUMP 99
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+IN
+<-JUMP 42
+
+END
+
+->TO 42
+PUSH 0
+<-JUMPNEQ 0
+PUSH 0
+<-JUMPGR 3
+RET
+
+->TO 3
+DBL
+PUSH 1
+SUB
+<-JUMP 42
+
+->TO 0
+POP
+POP
+PUSH 1
+OUT
+RET
