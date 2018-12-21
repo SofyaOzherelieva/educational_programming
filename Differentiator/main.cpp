@@ -11,15 +11,15 @@ int main() {
 
   // Строим граф по выражению
   expr = Differentiator::ExpressionToGraph::expression_to_graph(input_expr.begin(), input_expr.end());
-  Differentiator::Visualizer::visualize_tree(*expr, "./graphs/expression");
+  Differentiator::Visualizer::visualize_tree(*expr, "expressionGraph");
 
   // Строим граф производной по графу выражения
   auto der_expr = Differentiator::diff(*expr);
-  Differentiator::Visualizer::visualize_tree(*der_expr, "./graphs/derivative");
+  Differentiator::Visualizer::visualize_tree(*der_expr, "diffGraph");
 
   // Упрощаем граф производной
   Differentiator::SimplifyGraph::simplify(*der_expr);
-  Differentiator::Visualizer::visualize_tree(*der_expr, "./graphs/derivative_simplified");
+  Differentiator::Visualizer::visualize_tree(*der_expr, "diffSimplGraph");
 
   // Выводим производную в строку
   auto der_expr_str = Differentiator::GraphToExpression::serialize_string(*der_expr);
