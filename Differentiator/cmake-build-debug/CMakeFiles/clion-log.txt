@@ -1,0 +1,4 @@
+/home/sofya/Apps/clion-2017.3.3/bin/cmake/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/sofya/Homework/Ded_hometasks/educational_programming/Differentiator
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/sofya/Homework/Ded_hometasks/educational_programming/Differentiator/cmake-build-debug
