@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/sofya/Homework/Ded_hometasks/educational_programming/hometask_3/buffer.h
+iostream
+-
+
+/home/sofya/Homework/Ded_hometasks/educational_programming/hometask_3/main.cpp
+stack.h
+/home/sofya/Homework/Ded_hometasks/educational_programming/hometask_3/stack.h
+
+/home/sofya/Homework/Ded_hometasks/educational_programming/hometask_3/stack.h
+buffer.h
+/home/sofya/Homework/Ded_hometasks/educational_programming/hometask_3/buffer.h
+

@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/runUnitTests.dir/Test.cpp.o  -o runUnitTests -lgtest -lgmock -lhometask_3 
