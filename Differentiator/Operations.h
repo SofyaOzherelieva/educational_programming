@@ -36,7 +36,3 @@ OPERATION(CONST_OP, "", 0,
 OPERATION(VAR_OP, "", 0,
           {},
           { return std::make_unique<ExprNode>(1.); })
-
-OPERATION(EMPTY_OP, "", 0,
-          {},
-          {})

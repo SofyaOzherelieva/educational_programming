@@ -1,6 +1,5 @@
 #pragma once
 
-#include <iostream>
 #include "ExpressionNode.h"
 
 #define iterStrType std::string::iterator

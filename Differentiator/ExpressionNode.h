@@ -3,6 +3,7 @@
 #include <cmath>
 #include <memory>
 #include <cassert>
+#include <iostream>
 
 
 #define L(node) ((node).left_)

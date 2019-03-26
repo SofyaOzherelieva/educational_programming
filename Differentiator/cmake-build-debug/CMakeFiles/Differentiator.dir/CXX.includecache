@@ -7,14 +7,6 @@
 #IncludeRegexTransform: 
 
 /home/sofya/Homework/Ded_hometasks/educational_programming/Differentiator/Differentiator.h
-iostream
--
-string
--
-limits
--
-queue
--
 GraphVisualizer.h
 /home/sofya/Homework/Ded_hometasks/educational_programming/Differentiator/GraphVisualizer.h
 ExpressionToGraph.h
@@ -33,14 +25,14 @@ memory
 -
 cassert
 -
+iostream
+-
 Operations.h
 /home/sofya/Homework/Ded_hometasks/educational_programming/Differentiator/Operations.h
 Operations.h
 /home/sofya/Homework/Ded_hometasks/educational_programming/Differentiator/Operations.h
 
 /home/sofya/Homework/Ded_hometasks/educational_programming/Differentiator/ExpressionToGraph.h
-iostream
--
 ExpressionNode.h
 /home/sofya/Homework/Ded_hometasks/educational_programming/Differentiator/ExpressionNode.h
 Operations.h
@@ -49,10 +41,6 @@ Operations.h
 /home/sofya/Homework/Ded_hometasks/educational_programming/Differentiator/Operations.h
 
 /home/sofya/Homework/Ded_hometasks/educational_programming/Differentiator/GraphToExpression.h
-iostream
--
-string
--
 ExpressionNode.h
 /home/sofya/Homework/Ded_hometasks/educational_programming/Differentiator/ExpressionNode.h
 Operations.h
